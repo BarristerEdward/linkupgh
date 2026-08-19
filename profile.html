@@ -1,0 +1,2086 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Build Your Profile — LinkUpGH</title>
+
+    <meta
+        name="description"
+        content="Build your LinkUpGH profile and show people who you really are."
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+<!-- ============================= -->
+<!-- PROFILE HEADER -->
+<!-- ============================= -->
+
+<header class="profile-header">
+
+    <div class="profile-header-container">
+
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+            LinkUp<span>GH</span>
+        </a>
+
+        <!-- Progress -->
+        <div class="profile-progress">
+
+            <span class="progress-step active">
+                01
+            </span>
+
+            <span class="progress-line"></span>
+
+            <span class="progress-step">
+                02
+            </span>
+
+            <span class="progress-line"></span>
+
+            <span class="progress-step">
+                03
+            </span>
+
+        </div>
+
+        <!-- Exit -->
+        <a href="index.html" class="profile-exit">
+            Exit
+        </a>
+
+    </div>
+
+</header>
+
+  <!-- ============================= -->
+<!-- PROFILE WELCOME -->
+<!-- ============================= -->
+
+<main class="profile-main">
+
+    <section class="profile-welcome">
+
+        <div class="profile-welcome-content">
+
+            <span class="section-label">
+                BUILD YOUR PROFILE
+            </span>
+
+            <h1>
+                Let people see
+                <span>who you are.</span>
+            </h1>
+
+            <p>
+                Your profile is more than a photo.
+                Tell people what makes you unique,
+                what you enjoy, and what you're looking for.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+  <!-- ============================= -->
+<!-- SECTION 01 — ABOUT YOU -->
+<!-- ============================= -->
+
+<section class="profile-about">
+
+    <div class="form-section-header">
+
+        <span class="form-step">
+            STEP 01
+        </span>
+
+        <h2>
+            Tell people a little
+            <span>about you.</span>
+        </h2>
+
+        <p>
+            Start with the basics. You can always change
+            these details later.
+        </p>
+
+    </div>
+
+
+    <!-- Display Name -->
+
+    <div class="form-group">
+
+        <label for="displayName">
+            Display Name
+        </label>
+
+        <input
+            type="text"
+            id="displayName"
+            name="displayName"
+            placeholder="What should people call you?"
+            maxlength="30"
+            autocomplete="nickname"
+        >
+
+        <small>
+            This is the name people will see on your profile.
+        </small>
+
+    </div>
+
+
+    <!-- About Me -->
+
+    <div class="form-group">
+
+        <label for="aboutMe">
+            About Me
+        </label>
+
+        <textarea
+            id="aboutMe"
+            name="aboutMe"
+            rows="5"
+            maxlength="300"
+            placeholder="Tell people something interesting about you..."
+        ></textarea>
+
+        <small>
+            Keep it natural. Let your personality show.
+        </small>
+
+    </div>
+
+
+    <!-- Continue -->
+
+    <button
+        type="button"
+        class="form-primary-btn"
+        id="aboutYouContinue"
+    >
+        Continue
+        <span>→</span>
+    </button>
+
+</section>
+
+  <!-- ============================= -->
+<!-- SECTION 02 — INTERESTS & HOBBIES -->
+<!-- ============================= -->
+
+<section class="profile-interests">
+
+    <div class="profile-section-header">
+
+        <span class="profile-step">
+            STEP 02
+        </span>
+
+        <h2>
+            What are you
+            <span>into?</span>
+        </h2>
+
+        <p>
+            Pick the things you genuinely enjoy.
+            We'll use them to help you find people
+            who share your vibe.
+        </p>
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- INTERESTS -->
+    <!-- ============================= -->
+
+    <div class="interest-group">
+
+        <div class="interest-heading">
+
+            <h3>
+                Your interests
+            </h3>
+
+            <span class="selection-count">
+                <strong id="interestCount">0</strong> selected
+            </span>
+
+        </div>
+
+        <p class="interest-description">
+            Choose at least 3.
+        </p>
+
+
+        <div class="interest-options">
+
+            <button type="button" class="interest-option" data-interest="football">
+                <span>⚽</span>
+                Football
+            </button>
+
+            <button type="button" class="interest-option" data-interest="music">
+                <span>🎵</span>
+                Music
+            </button>
+
+            <button type="button" class="interest-option" data-interest="movies">
+                <span>🎬</span>
+                Movies
+            </button>
+
+            <button type="button" class="interest-option" data-interest="gaming">
+                <span>🎮</span>
+                Gaming
+            </button>
+
+            <button type="button" class="interest-option" data-interest="travel">
+                <span>✈️</span>
+                Travel
+            </button>
+
+            <button type="button" class="interest-option" data-interest="food">
+                <span>🍔</span>
+                Food
+            </button>
+
+            <button type="button" class="interest-option" data-interest="fitness">
+                <span>🏋️</span>
+                Fitness
+            </button>
+
+            <button type="button" class="interest-option" data-interest="fashion">
+                <span>👗</span>
+                Fashion
+            </button>
+
+            <button type="button" class="interest-option" data-interest="technology">
+                <span>💻</span>
+                Technology
+            </button>
+
+            <button type="button" class="interest-option" data-interest="photography">
+                <span>📸</span>
+                Photography
+            </button>
+
+            <button type="button" class="interest-option" data-interest="art">
+                <span>🎨</span>
+                Art
+            </button>
+
+            <button type="button" class="interest-option" data-interest="culture">
+                <span>🌍</span>
+                Culture
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- HOBBIES -->
+    <!-- ============================= -->
+
+    <div class="interest-group">
+
+        <div class="interest-heading">
+
+            <h3>
+                Your hobbies
+            </h3>
+
+            <span class="selection-count">
+                <strong id="hobbyCount">0</strong> selected
+            </span>
+
+        </div>
+
+        <p class="interest-description">
+            What do you enjoy doing in your free time?
+        </p>
+
+
+        <div class="interest-options">
+
+            <button type="button" class="interest-option" data-hobby="listening-music">
+                <span>🎧</span>
+                Listening to Music
+            </button>
+
+            <button type="button" class="interest-option" data-hobby="watching-movies">
+                <span>🍿</span>
+                Watching Movies
+            </button>
+
+            <button type="button" class="interest-option" data-hobby="running">
+                <span>🏃</span>
+                Running
+            </button>
+
+            <button type="button" class="interest-option" data-hobby="swimming">
+                <span>🏊</span>
+                Swimming
+            </button>
+
+            <button type="button" class="interest-option" data-hobby="playing-football">
+                <span>⚽</span>
+                Playing Football
+            </button>
+
+            <button type="button" class="interest-option" data-hobby="playing-games">
+                <span>🎮</span>
+                Playing Games
+            </button>
+
+            <button type="button" class="interest-option" data-hobby="cooking">
+                <span>🍳</span>
+                Cooking
+            </button>
+
+            <button type="button" class="interest-option" data-hobby="reading">
+                <span>📚</span>
+                Reading
+            </button>
+
+            <button type="button" class="interest-option" data-hobby="singing">
+                <span>🎤</span>
+                Singing
+            </button>
+
+            <button type="button" class="interest-option" data-hobby="dancing">
+                <span>💃</span>
+                Dancing
+            </button>
+
+            <button type="button" class="interest-option" data-hobby="travelling">
+                <span>🧳</span>
+                Travelling
+            </button>
+
+            <button type="button" class="interest-option" data-hobby="shopping">
+                <span>🛍️</span>
+                Shopping
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- CONTINUE -->
+    <!-- ============================= -->
+
+    <button
+        type="button"
+        class="form-primary-btn interests-continue"
+        id="interestsContinue"
+    >
+        Continue
+        <span>→</span>
+    </button>
+
+</section>
+
+  <!-- ============================= -->
+<!-- SECTION 03 — PERSONALITY -->
+<!-- ============================= -->
+
+<section class="profile-personality">
+
+    <div class="profile-section-header">
+
+        <span class="profile-step">
+            STEP 03
+        </span>
+
+        <h2>
+            What's your
+            <span>personality like?</span>
+        </h2>
+
+        <p>
+            There are no right or wrong answers.
+            Choose what feels most like you.
+        </p>
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- SOCIAL STYLE -->
+    <!-- ============================= -->
+
+    <div class="personality-group">
+
+        <h3>
+            How would you describe yourself?
+        </h3>
+
+        <p class="field-description">
+            Pick the option that feels closest to you.
+        </p>
+
+
+        <div class="personality-options">
+
+            <button
+                type="button"
+                class="personality-option"
+                data-personality="introvert"
+            >
+
+                <span class="personality-icon">
+                    🌙
+                </span>
+
+                <span class="personality-content">
+
+                    <strong>
+                        Introvert
+                    </strong>
+
+                    <small>
+                        I enjoy quiet moments and smaller circles.
+                    </small>
+
+                </span>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="personality-option"
+                data-personality="ambivert"
+            >
+
+                <span class="personality-icon">
+                    ⚖️
+                </span>
+
+                <span class="personality-content">
+
+                    <strong>
+                        Ambivert
+                    </strong>
+
+                    <small>
+                        I enjoy both social time and my own space.
+                    </small>
+
+                </span>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="personality-option"
+                data-personality="extrovert"
+            >
+
+                <span class="personality-icon">
+                    ☀️
+                </span>
+
+                <span class="personality-content">
+
+                    <strong>
+                        Extrovert
+                    </strong>
+
+                    <small>
+                        I enjoy meeting people and being around others.
+                    </small>
+
+                </span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- CONVERSATION STYLE -->
+    <!-- ============================= -->
+
+    <div class="personality-group">
+
+        <div class="interest-heading">
+
+            <div>
+
+                <h3>
+                    Your conversation style
+                </h3>
+
+                <p class="field-description">
+                    What kind of conversations do you enjoy?
+                </p>
+
+            </div>
+
+            <span class="selection-count">
+                <strong id="conversationCount">0</strong> selected
+            </span>
+
+        </div>
+
+
+        <div class="personality-tags">
+
+            <button
+                type="button"
+                class="personality-tag"
+                data-conversation="deep-talks"
+            >
+                💭 Deep talks
+            </button>
+
+            <button
+                type="button"
+                class="personality-tag"
+                data-conversation="funny"
+            >
+                😂 Always joking
+            </button>
+
+            <button
+                type="button"
+                class="personality-tag"
+                data-conversation="flirty"
+            >
+                😉 A little flirty
+            </button>
+
+            <button
+                type="button"
+                class="personality-tag"
+                data-conversation="chill"
+            >
+                😌 Chill conversations
+            </button>
+
+            <button
+                type="button"
+                class="personality-tag"
+                data-conversation="random"
+            >
+                🤪 Random & spontaneous
+            </button>
+
+            <button
+                type="button"
+                class="personality-tag"
+                data-conversation="listener"
+            >
+                👂 Good listener
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- PERSONALITY TRAITS -->
+    <!-- ============================= -->
+
+    <div class="personality-group">
+
+        <div class="interest-heading">
+
+            <div>
+
+                <h3>
+                    Pick your traits
+                </h3>
+
+                <p class="field-description">
+                    Choose the words that describe you.
+                </p>
+
+            </div>
+
+            <span class="selection-count">
+                <strong id="traitCount">0</strong> selected
+            </span>
+
+        </div>
+
+
+        <div class="personality-tags">
+
+            <button
+                type="button"
+                class="personality-tag"
+                data-trait="friendly"
+            >
+                😊 Friendly
+            </button>
+
+            <button
+                type="button"
+                class="personality-tag"
+                data-trait="funny"
+            >
+                😂 Funny
+            </button>
+
+            <button
+                type="button"
+                class="personality-tag"
+                data-trait="calm"
+            >
+                🧘 Calm
+            </button>
+
+            <button
+                type="button"
+                class="personality-tag"
+                data-trait="talkative"
+            >
+                🗣️ Talkative
+            </button>
+
+            <button
+                type="button"
+                class="personality-tag"
+                data-trait="quiet"
+            >
+                🤫 Quiet
+            </button>
+
+            <button
+                type="button"
+                class="personality-tag"
+                data-trait="caring"
+            >
+                ❤️ Caring
+            </button>
+
+            <button
+                type="button"
+                class="personality-tag"
+                data-trait="intelligent"
+            >
+                🧠 Intelligent
+            </button>
+
+            <button
+                type="button"
+                class="personality-tag"
+                data-trait="easygoing"
+            >
+                😎 Easygoing
+            </button>
+
+            <button
+                type="button"
+                class="personality-tag"
+                data-trait="confident"
+            >
+                🔥 Confident
+            </button>
+
+            <button
+                type="button"
+                class="personality-tag"
+                data-trait="ambitious"
+            >
+                🌱 Ambitious
+            </button>
+
+            <button
+                type="button"
+                class="personality-tag"
+                data-trait="focused"
+            >
+                🎯 Focused
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- CONTINUE -->
+    <!-- ============================= -->
+
+    <button
+        type="button"
+        class="form-primary-btn personality-continue"
+        id="personalityContinue"
+    >
+        Continue
+        <span>→</span>
+    </button>
+
+</section>
+
+  <!-- ============================= -->
+<!-- SECTION 04 — WHAT I'M LOOKING FOR -->
+<!-- ============================= -->
+
+<section class="profile-looking-for">
+
+    <div class="profile-section-header">
+
+        <span class="profile-step">
+            STEP 04
+        </span>
+
+        <h2>
+            What are you
+            <span>looking for?</span>
+        </h2>
+
+        <p>
+            Be honest about what you're hoping to find.
+            This helps us connect you with people on the same page.
+        </p>
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- CONNECTION TYPE -->
+    <!-- ============================= -->
+
+    <div class="looking-for-group">
+
+        <h3>
+            I'm here for...
+        </h3>
+
+        <p class="field-description">
+            Choose what you're most interested in.
+        </p>
+
+
+        <div class="looking-for-options">
+
+            <button
+                type="button"
+                class="looking-for-option"
+                data-looking-for="friendship"
+            >
+
+                <span class="looking-for-icon">
+                    🤝
+                </span>
+
+                <span class="looking-for-content">
+
+                    <strong>
+                        Friendship
+                    </strong>
+
+                    <small>
+                        Meet new people and build genuine friendships.
+                    </small>
+
+                </span>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="looking-for-option"
+                data-looking-for="dating"
+            >
+
+                <span class="looking-for-icon">
+                    ❤️
+                </span>
+
+                <span class="looking-for-content">
+
+                    <strong>
+                        Dating
+                    </strong>
+
+                    <small>
+                        Meet someone and see where the connection goes.
+                    </small>
+
+                </span>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="looking-for-option"
+                data-looking-for="relationship"
+            >
+
+                <span class="looking-for-icon">
+                    💕
+                </span>
+
+                <span class="looking-for-content">
+
+                    <strong>
+                        Serious Relationship
+                    </strong>
+
+                    <small>
+                        I'm looking for something meaningful and long-term.
+                    </small>
+
+                </span>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="looking-for-option"
+                data-looking-for="meeting-people"
+            >
+
+                <span class="looking-for-icon">
+                    🌍
+                </span>
+
+                <span class="looking-for-content">
+
+                    <strong>
+                        Meeting New People
+                    </strong>
+
+                    <small>
+                        I just want to connect and discover new people.
+                    </small>
+
+                </span>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="looking-for-option"
+                data-looking-for="not-sure"
+            >
+
+                <span class="looking-for-icon">
+                    🤔
+                </span>
+
+                <span class="looking-for-content">
+
+                    <strong>
+                        I'm Not Sure Yet
+                    </strong>
+
+                    <small>
+                        I'm open to seeing where things naturally go.
+                    </small>
+
+                </span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- CONTINUE -->
+    <!-- ============================= -->
+
+    <button
+        type="button"
+        class="form-primary-btn looking-for-continue"
+        id="lookingForContinue"
+    >
+        Continue
+        <span>→</span>
+    </button>
+
+</section>
+
+  <!-- ============================= -->
+<!-- SECTION 05 — DATING PREFERENCES -->
+<!-- ============================= -->
+
+<section class="profile-preferences">
+
+    <div class="profile-section-header">
+
+        <span class="profile-step">
+            STEP 05
+        </span>
+
+        <h2>
+            Who would you like to
+            <span>meet?</span>
+        </h2>
+
+        <p>
+            Set your preferences so we can show you people
+            who are more likely to match your vibe.
+        </p>
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- INTERESTED IN -->
+    <!-- ============================= -->
+
+    <div class="profile-field">
+
+        <h3>
+            I'm interested in
+        </h3>
+
+        <p class="field-description">
+            Choose who you'd like to discover.
+        </p>
+
+
+        <div class="preference-options">
+
+            <button
+                type="button"
+                class="preference-option"
+                data-preference="men"
+            >
+                👨 Men
+            </button>
+
+            <button
+                type="button"
+                class="preference-option"
+                data-preference="women"
+            >
+                👩 Women
+            </button>
+
+            <button
+                type="button"
+                class="preference-option"
+                data-preference="everyone"
+            >
+                🌍 Everyone
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- AGE RANGE -->
+    <!-- ============================= -->
+
+    <div class="profile-field">
+
+        <h3>
+            Preferred age range
+        </h3>
+
+        <p class="field-description">
+            Choose the age range you'd be comfortable meeting.
+        </p>
+
+
+        <div class="age-range">
+
+            <div class="age-field">
+
+                <label for="minAge">
+                    Minimum age
+                </label>
+
+                <select
+                    id="minAge"
+                    name="minAge"
+                >
+
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="35">35</option>
+                    <option value="40">40+</option>
+
+                </select>
+
+            </div>
+
+
+            <span class="age-range-divider">
+                to
+            </span>
+
+
+            <div class="age-field">
+
+                <label for="maxAge">
+                    Maximum age
+                </label>
+
+                <select
+                    id="maxAge"
+                    name="maxAge"
+                >
+
+                    <option value="25">25</option>
+                    <option value="30">30</option>
+                    <option value="35">35</option>
+                    <option value="40">40</option>
+                    <option value="45">45</option>
+                    <option value="50">50+</option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- DISTANCE -->
+    <!-- ============================= -->
+
+    <div class="profile-field">
+
+        <label for="distance">
+            Preferred distance
+        </label>
+
+        <select
+            id="distance"
+            name="distance"
+        >
+
+            <option value="5">
+                Within 5 km
+            </option>
+
+            <option value="10">
+                Within 10 km
+            </option>
+
+            <option value="25">
+                Within 25 km
+            </option>
+
+            <option value="50">
+                Within 50 km
+            </option>
+
+            <option value="100">
+                Within 100 km
+            </option>
+
+            <option value="anywhere">
+                Anywhere in Ghana
+            </option>
+
+        </select>
+
+        <small>
+            Your exact location will never be shown to other users.
+        </small>
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- RELATIONSHIP INTENT -->
+    <!-- ============================= -->
+
+    <div class="profile-field">
+
+        <h3>
+            What are you open to?
+        </h3>
+
+        <p class="field-description">
+            You can choose more than one.
+        </p>
+
+
+        <div class="preference-options preference-multiple">
+
+            <button
+                type="button"
+                class="preference-option"
+                data-intent="getting-to-know"
+            >
+                💬 Getting to know someone
+            </button>
+
+            <button
+                type="button"
+                class="preference-option"
+                data-intent="dating"
+            >
+                ❤️ Dating
+            </button>
+
+            <button
+                type="button"
+                class="preference-option"
+                data-intent="serious"
+            >
+                💕 Serious relationship
+            </button>
+
+            <button
+                type="button"
+                class="preference-option"
+                data-intent="friendship"
+            >
+                🤝 Friendship
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- PRIVACY NOTICE -->
+    <!-- ============================= -->
+
+    <div class="profile-notice">
+
+        <span>
+            🔒
+        </span>
+
+        <div>
+
+            <strong>
+                Your preferences are private.
+            </strong>
+
+            <p>
+                They're used to improve your matches and
+                won't be displayed publicly on your profile.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- CONTINUE -->
+    <!-- ============================= -->
+
+    <button
+        type="button"
+        class="form-primary-btn preferences-continue"
+        id="preferencesContinue"
+    >
+        Continue
+        <span>→</span>
+    </button>
+
+</section>
+
+  <!-- ============================= -->
+<!-- SECTION 06 — AVATAR -->
+<!-- ============================= -->
+
+<section class="profile-avatar">
+
+    <div class="profile-section-header">
+
+        <span class="profile-step">
+            STEP 06
+        </span>
+
+        <h2>
+            Choose your
+            <span>avatar.</span>
+        </h2>
+
+        <p>
+            Your avatar represents you while your real photo
+            stays private. Pick the one that feels most like you.
+        </p>
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- AVATAR PREVIEW -->
+    <!-- ============================= -->
+
+    <div class="avatar-preview">
+
+        <div class="avatar-circle">
+
+            <span id="selectedAvatar">
+                😊
+            </span>
+
+        </div>
+
+        <span class="avatar-preview-label">
+            YOUR AVATAR
+        </span>
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- AVATAR SELECTION -->
+    <!-- ============================= -->
+
+    <div class="avatar-selection">
+
+        <div class="avatar-selection-header">
+
+            <div>
+
+                <h3>
+                    Pick your vibe
+                </h3>
+
+                <p>
+                    You can change your avatar anytime.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="avatar-options">
+
+            <button
+                type="button"
+                class="avatar-option active"
+                data-avatar="😊"
+                aria-label="Happy avatar"
+            >
+                😊
+            </button>
+
+            <button
+                type="button"
+                class="avatar-option"
+                data-avatar="😎"
+                aria-label="Cool avatar"
+            >
+                😎
+            </button>
+
+            <button
+                type="button"
+                class="avatar-option"
+                data-avatar="🥰"
+                aria-label="Lovely avatar"
+            >
+                🥰
+            </button>
+
+            <button
+                type="button"
+                class="avatar-option"
+                data-avatar="🤩"
+                aria-label="Excited avatar"
+            >
+                🤩
+            </button>
+
+            <button
+                type="button"
+                class="avatar-option"
+                data-avatar="😌"
+                aria-label="Calm avatar"
+            >
+                😌
+            </button>
+
+            <button
+                type="button"
+                class="avatar-option"
+                data-avatar="😏"
+                aria-label="Confident avatar"
+            >
+                😏
+            </button>
+
+            <button
+                type="button"
+                class="avatar-option"
+                data-avatar="🤓"
+                aria-label="Smart avatar"
+            >
+                🤓
+            </button>
+
+            <button
+                type="button"
+                class="avatar-option"
+                data-avatar="🥳"
+                aria-label="Fun avatar"
+            >
+                🥳
+            </button>
+
+            <button
+                type="button"
+                class="avatar-option"
+                data-avatar="😇"
+                aria-label="Kind avatar"
+            >
+                😇
+            </button>
+
+            <button
+                type="button"
+                class="avatar-option"
+                data-avatar="🫶"
+                aria-label="Caring avatar"
+            >
+                🫶
+            </button>
+
+            <button
+                type="button"
+                class="avatar-option"
+                data-avatar="🤠"
+                aria-label="Adventurous avatar"
+            >
+                🤠
+            </button>
+
+            <button
+                type="button"
+                class="avatar-option"
+                data-avatar="👑"
+                aria-label="Royal avatar"
+            >
+                👑
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- PRIVACY NOTICE -->
+    <!-- ============================= -->
+
+    <div class="profile-notice">
+
+        <span>
+            🔒
+        </span>
+
+        <div>
+
+            <strong>
+                Your real photo stays private.
+            </strong>
+
+            <p>
+                LinkUpGH is built around personality first.
+                Your avatar will be shown instead of your real
+                photo until you choose to reveal it.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- CONTINUE -->
+    <!-- ============================= -->
+
+    <button
+        type="button"
+        class="form-primary-btn avatar-continue"
+        id="avatarContinue"
+    >
+        Continue
+        <span>→</span>
+    </button>
+
+</section>
+
+  <!-- ============================= -->
+<!-- SECTION 07 — PHOTO REVEAL -->
+<!-- ============================= -->
+
+<section class="photo-reveal-settings">
+
+    <div class="profile-section-header">
+
+        <span class="profile-step">
+            STEP 07
+        </span>
+
+        <h2>
+            You decide when to
+            <span>reveal.</span>
+        </h2>
+
+        <p>
+            Your real photo stays private until you feel
+            comfortable sharing it. Choose how photo reveals work.
+        </p>
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- REVEAL PREVIEW -->
+    <!-- ============================= -->
+
+    <div class="reveal-preview">
+
+        <div class="reveal-avatar">
+
+            <span>
+                🔒
+            </span>
+
+        </div>
+
+        <div class="reveal-preview-content">
+
+            <span class="reveal-label">
+                PHOTO PRIVATE
+            </span>
+
+            <h3>
+                Personality comes first.
+            </h3>
+
+            <p>
+                People can get to know you through your profile
+                and conversations before seeing your real photo.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- REVEAL OPTIONS -->
+    <!-- ============================= -->
+
+    <div class="profile-field">
+
+        <h3>
+            When can someone see your photo?
+        </h3>
+
+        <p class="field-description">
+            Choose the option that feels most comfortable for you.
+        </p>
+
+
+        <div class="reveal-options">
+
+
+            <!-- Request -->
+
+            <button
+                type="button"
+                class="reveal-option active"
+                data-reveal="request"
+            >
+
+                <span class="reveal-option-icon">
+                    💬
+                </span>
+
+                <span class="reveal-option-content">
+
+                    <strong>
+                        After they request
+                    </strong>
+
+                    <small>
+                        Someone can request to see your photo.
+                        You decide whether to accept.
+                    </small>
+
+                </span>
+
+                <span class="reveal-option-check">
+                    ✓
+                </span>
+
+            </button>
+
+
+            <!-- Mutual Agreement -->
+
+            <button
+                type="button"
+                class="reveal-option"
+                data-reveal="mutual"
+            >
+
+                <span class="reveal-option-icon">
+                    ❤️
+                </span>
+
+                <span class="reveal-option-content">
+
+                    <strong>
+                        After we both agree
+                    </strong>
+
+                    <small>
+                        Your photo becomes visible only when
+                        both people agree to reveal.
+                    </small>
+
+                </span>
+
+                <span class="reveal-option-check">
+                    ✓
+                </span>
+
+            </button>
+
+
+            <!-- Manual -->
+
+            <button
+                type="button"
+                class="reveal-option"
+                data-reveal="manual"
+            >
+
+                <span class="reveal-option-icon">
+                    🔐
+                </span>
+
+                <span class="reveal-option-content">
+
+                    <strong>
+                        I'll reveal it myself
+                    </strong>
+
+                    <small>
+                        Your photo remains private until you
+                        personally choose to reveal it.
+                    </small>
+
+                </span>
+
+                <span class="reveal-option-check">
+                    ✓
+                </span>
+
+            </button>
+
+
+        </div>
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- PRIVACY PROMISE -->
+    <!-- ============================= -->
+
+    <div class="profile-notice reveal-privacy-notice">
+
+        <span>
+            🛡️
+        </span>
+
+        <div>
+
+            <strong>
+                Your photo is always under your control.
+            </strong>
+
+            <p>
+                No one can see your private photo without
+                your permission. You can change your reveal
+                settings later.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- CONTINUE -->
+    <!-- ============================= -->
+
+    <button
+        type="button"
+        class="form-primary-btn reveal-continue"
+        id="revealContinue"
+    >
+        Continue
+        <span>→</span>
+    </button>
+
+</section>
+
+  <!-- ============================= -->
+<!-- STEP 08 — PROFILE PREVIEW -->
+<!-- ============================= -->
+
+<section class="profile-preview-section" id="profile-preview">
+
+    <div class="profile-section-header">
+
+        <span class="profile-step">
+            STEP 08
+        </span>
+
+        <h2>
+            Here's how people will
+            <span>see you.</span>
+        </h2>
+
+        <p>
+            Take a final look at your profile before you
+            start discovering people on LinkUpGH.
+        </p>
+
+    </div>
+
+
+    <!-- PROFILE PREVIEW CARD -->
+
+    <div class="profile-preview-card">
+
+
+        <!-- Profile Top -->
+
+        <div class="preview-profile-top">
+
+            <div class="preview-avatar">
+
+                <span id="previewAvatar">
+                    😊
+                </span>
+
+            </div>
+
+            <div class="preview-identity">
+
+                <h3 id="previewName">
+                    Your Name
+                </h3>
+
+                <span id="previewLocation">
+                    📍 Your City
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- About Me -->
+
+        <div class="preview-section">
+
+            <span class="preview-label">
+                ABOUT ME
+            </span>
+
+            <p id="previewAbout">
+                Your introduction will appear here.
+            </p>
+
+        </div>
+
+
+        <!-- Interests -->
+
+        <div class="preview-section">
+
+            <span class="preview-label">
+                INTERESTS
+            </span>
+
+            <div
+                class="preview-tag-list"
+                id="previewInterests"
+            >
+
+                <span class="preview-tag">
+                    ⚽ Football
+                </span>
+
+                <span class="preview-tag">
+                    🎵 Music
+                </span>
+
+                <span class="preview-tag">
+                    🎮 Gaming
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Personality -->
+
+        <div class="preview-section">
+
+            <span class="preview-label">
+                PERSONALITY
+            </span>
+
+            <div
+                class="preview-tag-list"
+                id="previewPersonality"
+            >
+
+                <span class="preview-tag">
+                    😊 Friendly
+                </span>
+
+                <span class="preview-tag">
+                    😂 Funny
+                </span>
+
+                <span class="preview-tag">
+                    😎 Easygoing
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Looking For -->
+
+        <div class="preview-section">
+
+            <span class="preview-label">
+                LOOKING FOR
+            </span>
+
+            <p id="previewLookingFor">
+                Getting to know someone
+            </p>
+
+        </div>
+
+
+        <!-- Photo Privacy -->
+
+        <div class="preview-photo-private">
+
+            <div class="preview-photo-icon">
+                🔒
+            </div>
+
+            <div>
+
+                <strong>
+                    Photo private
+                </strong>
+
+                <p>
+                    Your real photo stays hidden until
+                    you choose to reveal it.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Actions -->
+
+        <div class="preview-actions">
+
+            <button
+                type="button"
+                class="preview-action secondary"
+                id="editProfileBtn"
+            >
+                Edit Profile
+            </button>
+
+            <button
+                type="button"
+                class="preview-action primary"
+                id="profileLooksGoodBtn"
+            >
+                Looks Good
+                <span>✓</span>
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- PRIVACY NOTICE -->
+
+    <div class="profile-notice">
+
+        <span>
+            👀
+        </span>
+
+        <div>
+
+            <strong>
+                This is your public profile.
+            </strong>
+
+            <p>
+                Your email, phone number, password and
+                verification information will never appear here.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- CONTINUE -->
+
+    <button
+        type="button"
+        class="form-primary-btn preview-continue"
+        id="previewContinue"
+    >
+        Finish Profile
+        <span>→</span>
+    </button>
+
+</section>
+
+  <!-- ============================= -->
+<!-- STEP 09 — PROFILE COMPLETE -->
+<!-- ============================= -->
+
+<section class="profile-complete" id="profileComplete">
+
+    <div class="profile-complete-container">
+
+        <!-- Success Icon -->
+        <div class="complete-icon">
+
+            <div class="complete-check">
+                ✓
+            </div>
+
+        </div>
+
+
+        <!-- Label -->
+        <span class="complete-label">
+            PROFILE READY 🇬🇭
+        </span>
+
+
+        <!-- Heading -->
+        <h2>
+            You're ready to
+            <span>LinkUp.</span>
+        </h2>
+
+
+        <!-- Description -->
+        <p class="complete-description">
+            Your profile is complete.
+            Now it's time to discover people,
+            start conversations and build
+            meaningful connections.
+        </p>
+
+
+        <!-- Completion Card -->
+        <div class="completion-card">
+
+            <div class="completion-header">
+
+                <span>
+                    Profile completion
+                </span>
+
+                <strong>
+                    100%
+                </strong>
+
+            </div>
+
+
+            <div class="completion-bar">
+
+                <div
+                    class="completion-fill"
+                    style="width: 100%;"
+                ></div>
+
+            </div>
+
+
+            <p>
+                Your profile is ready to be discovered.
+            </p>
+
+        </div>
+
+
+        <!-- What Happens Next -->
+        <div class="complete-next">
+
+            <div class="complete-next-item">
+
+                <span class="complete-next-icon">
+                    🔎
+                </span>
+
+                <div>
+
+                    <strong>
+                        Discover people
+                    </strong>
+
+                    <p>
+                        Find people who match your
+                        interests and personality.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="complete-next-item">
+
+                <span class="complete-next-icon">
+                    💬
+                </span>
+
+                <div>
+
+                    <strong>
+                        Start conversations
+                    </strong>
+
+                    <p>
+                        Get to know someone before
+                        the picture.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="complete-next-item">
+
+                <span class="complete-next-icon">
+                    ❤️
+                </span>
+
+                <div>
+
+                    <strong>
+                        Build a connection
+                    </strong>
+
+                    <p>
+                        Let something meaningful
+                        develop naturally.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Main CTA -->
+        <a
+            href="dashboard.html"
+            class="form-primary-btn complete-primary-btn"
+        >
+            Enter LinkUpGH
+            <span>→</span>
+        </a>
+
+
+        <!-- Secondary Action -->
+        <a
+            href="#profile-preview"
+            class="complete-secondary-btn"
+        >
+            Review My Profile
+        </a>
+
+
+        <!-- Closing Message -->
+        <div class="complete-message">
+
+            <span>
+                Talk first.
+            </span>
+
+            <strong>
+                See later.
+            </strong>
+
+        </div>
+
+    </div>
+
+</section>
+
+  
+</body>
+
+</html>
