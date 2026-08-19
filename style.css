@@ -8569,3 +8569,355 @@ img {
     }
 
 }
+
+
+
+/* =========================================================
+   LINKUPGH LOGIN PAGE — PREMIUM BASE
+   ========================================================= */
+
+.login-page {
+    min-height: 100vh;
+    background: #0b0d0c;
+    color: #f5f7f5;
+    font-family: "DM Sans", sans-serif;
+    position: relative;
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   PREMIUM BACKGROUND GLOW
+   ========================================================= */
+
+.login-page::before {
+    content: "";
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(24, 196, 124, 0.10);
+    filter: blur(120px);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.login-nav {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    padding: 28px 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+    z-index: 10;
+}
+
+
+/* LOGO */
+
+.login-nav .logo {
+    text-decoration: none;
+    color: #f5f7f5;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.login-nav .logo span {
+    color: #18c47c;
+}
+
+
+/* NAV RIGHT */
+
+.login-nav-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-size: 0.9rem;
+    color: #707971;
+}
+
+.login-nav-right a {
+    color: #18c47c;
+    text-decoration: none;
+    font-weight: 600;
+
+    transition: color 0.25s ease;
+}
+
+.login-nav-right a:hover {
+    color: #54e39e;
+}
+
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+.login-main {
+    min-height: calc(100vh - 150px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px 70px;
+
+    position: relative;
+    z-index: 1;
+}
+
+
+/* =========================================================
+   LOGIN CARD
+   ========================================================= */
+
+.login-card {
+    width: 100%;
+    max-width: 480px;
+
+    background: rgba(21, 26, 23, 0.88);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 28px;
+
+    padding: 48px 44px;
+
+    position: relative;
+    overflow: hidden;
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.45),
+        0 0 60px rgba(24, 196, 124, 0.04);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+}
+
+
+/* TOP GREEN LINE */
+
+.login-card::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 15%;
+    right: 15%;
+
+    height: 1px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(24, 196, 124, 0.7),
+        transparent
+    );
+}
+
+
+/* CARD GLOW */
+
+.login-glow {
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    top: -140px;
+    right: -100px;
+
+    background: rgba(24, 196, 124, 0.08);
+
+    filter: blur(70px);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   LOGIN INTRO
+   ========================================================= */
+
+.login-intro {
+    position: relative;
+    z-index: 2;
+
+    text-align: center;
+
+    margin-bottom: 36px;
+}
+
+
+/* HEART ICON */
+
+.login-icon {
+    width: 54px;
+    height: 54px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background: rgba(24, 196, 124, 0.08);
+
+    border: 1px solid rgba(24, 196, 124, 0.18);
+
+    color: #18c47c;
+
+    font-size: 1.7rem;
+
+    box-shadow:
+        0 0 30px rgba(24, 196, 124, 0.08);
+}
+
+
+/* EYEBROW */
+
+.login-eyebrow {
+    margin: 0 0 12px;
+
+    color: #18c47c;
+
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+/* HEADING */
+
+.login-intro h1 {
+    margin: 0;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: clamp(2rem, 5vw, 2.7rem);
+
+    line-height: 1.12;
+
+    letter-spacing: -1.5px;
+
+    font-weight: 800;
+}
+
+.login-description {
+    max-width: 370px;
+
+    margin: 18px auto 0;
+
+    color: #a8b0aa;
+
+    font-size: 0.95rem;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.login-footer {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 20px 40px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: #707971;
+
+    font-size: 0.78rem;
+
+    position: relative;
+    z-index: 2;
+}
+
+.login-footer div {
+    display: flex;
+    gap: 20px;
+}
+
+.login-footer a {
+    color: #707971;
+    text-decoration: none;
+
+    transition: color 0.25s ease;
+}
+
+.login-footer a:hover {
+    color: #a8b0aa;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .login-nav {
+        padding: 22px 20px;
+    }
+
+    .login-nav-right span {
+        display: none;
+    }
+
+    .login-main {
+        padding: 20px 16px 50px;
+        align-items: flex-start;
+    }
+
+    .login-card {
+        padding: 36px 22px;
+
+        border-radius: 24px;
+    }
+
+    .login-intro h1 {
+        font-size: 2rem;
+    }
+
+    .login-description {
+        font-size: 0.9rem;
+    }
+
+    .login-footer {
+        padding: 20px;
+
+        flex-direction: column;
+        gap: 14px;
+
+        text-align: center;
+    }
+}
