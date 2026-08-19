@@ -618,3 +618,397 @@ document.addEventListener("DOMContentLoaded", function () {
     updateProgress(1);
 
 });
+
+
+/* ========================================= */
+/* LINKUPGH — PROFILE BUILDER JAVASCRIPT     */
+/* STEP 01 → STEP 08 → STEP 09              */
+/* ========================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    /* ========================================= */
+    /* STEP 06 — AVATAR SELECTION               */
+    /* ========================================= */
+
+    const avatarOptions =
+        document.querySelectorAll(".avatar-option");
+
+    const selectedAvatar =
+        document.querySelector("#selectedAvatar");
+
+    const previewAvatar =
+        document.querySelector("#previewAvatar");
+
+
+    avatarOptions.forEach(function (option) {
+
+        option.addEventListener("click", function () {
+
+            avatarOptions.forEach(function (item) {
+                item.classList.remove("active");
+            });
+
+            option.classList.add("active");
+
+            const avatar =
+                option.dataset.avatar;
+
+            if (selectedAvatar) {
+                selectedAvatar.textContent = avatar;
+            }
+
+            if (previewAvatar) {
+                previewAvatar.textContent = avatar;
+            }
+
+            localStorage.setItem(
+                "linkup_avatar",
+                avatar
+            );
+
+        });
+
+    });
+
+
+    /* ========================================= */
+    /* STEP 08 — PROFILE PREVIEW                */
+    /* ========================================= */
+
+    function updateProfilePreview() {
+
+        const displayName =
+            document.querySelector("#displayName");
+
+        const aboutMe =
+            document.querySelector("#aboutMe");
+
+
+        /* Name */
+
+        if (displayName && previewName) {
+
+            const name =
+                displayName.value.trim();
+
+            previewName.textContent =
+                name || "Your Name";
+
+        }
+
+
+        /* About */
+
+        if (aboutMe && previewAbout) {
+
+            const about =
+                aboutMe.value.trim();
+
+            previewAbout.textContent =
+                about || "Your introduction will appear here.";
+
+        }
+
+
+        /* Avatar */
+
+        const savedAvatar =
+            localStorage.getItem("linkup_avatar");
+
+        if (savedAvatar && previewAvatar) {
+
+            previewAvatar.textContent =
+                savedAvatar;
+
+        }
+
+
+        /* ================================= */
+        /* INTERESTS                          */
+        /* ================================= */
+
+        const selectedInterests =
+            document.querySelectorAll(
+                ".interest-option.active[data-interest]"
+            );
+
+        if (previewInterests) {
+
+            previewInterests.innerHTML = "";
+
+            selectedInterests.forEach(function (item) {
+
+                const tag =
+                    document.createElement("span");
+
+                tag.className =
+                    "preview-tag";
+
+                tag.textContent =
+                    item.textContent.trim();
+
+                previewInterests.appendChild(tag);
+
+            });
+
+        }
+
+
+        /* ================================= */
+        /* PERSONALITY                       */
+        /* ================================= */
+
+        const selectedTraits =
+            document.querySelectorAll(
+                ".personality-tag.active[data-trait]"
+            );
+
+        if (previewPersonality) {
+
+            previewPersonality.innerHTML = "";
+
+            selectedTraits.forEach(function (item) {
+
+                const tag =
+                    document.createElement("span");
+
+                tag.className =
+                    "preview-tag";
+
+                tag.textContent =
+                    item.textContent.trim();
+
+                previewPersonality.appendChild(tag);
+
+            });
+
+        }
+
+
+        /* ================================= */
+        /* LOOKING FOR                       */
+        /* ================================= */
+
+        const selectedLookingFor =
+            document.querySelector(
+                ".looking-for-option.active"
+            );
+
+        if (previewLookingFor && selectedLookingFor) {
+
+            const title =
+                selectedLookingFor.querySelector("strong");
+
+            if (title) {
+
+                previewLookingFor.textContent =
+                    title.textContent.trim();
+
+            }
+
+        }
+
+    }
+
+
+    /* ========================================= */
+    /* PREVIEW ELEMENTS                         */
+    /* ========================================= */
+
+    const previewName =
+        document.querySelector("#previewName");
+
+    const previewAbout =
+        document.querySelector("#previewAbout");
+
+    const previewInterests =
+        document.querySelector("#previewInterests");
+
+    const previewPersonality =
+        document.querySelector("#previewPersonality");
+
+    const previewLookingFor =
+        document.querySelector("#previewLookingFor");
+
+
+    /* ========================================= */
+    /* UPDATE PREVIEW WHEN USER TYPES            */
+    /* ========================================= */
+
+    const displayNameInput =
+        document.querySelector("#displayName");
+
+    const aboutMeInput =
+        document.querySelector("#aboutMe");
+
+
+    if (displayNameInput) {
+
+        displayNameInput.addEventListener(
+            "input",
+            updateProfilePreview
+        );
+
+    }
+
+
+    if (aboutMeInput) {
+
+        aboutMeInput.addEventListener(
+            "input",
+            updateProfilePreview
+        );
+
+    }
+
+
+    /* ========================================= */
+    /* INTEREST / PERSONALITY / LOOKING FOR      */
+    /* ========================================= */
+
+    document
+        .querySelectorAll(
+            ".interest-option, .personality-tag, .looking-for-option"
+        )
+        .forEach(function (button) {
+
+            button.addEventListener(
+                "click",
+                function () {
+
+                    setTimeout(
+                        updateProfilePreview,
+                        0
+                    );
+
+                }
+            );
+
+        });
+
+
+    /* ========================================= */
+    /* LOOKS GOOD                                */
+    /* ========================================= */
+
+    const profileLooksGoodBtn =
+        document.querySelector("#profileLooksGoodBtn");
+
+
+    if (profileLooksGoodBtn) {
+
+        profileLooksGoodBtn.addEventListener(
+            "click",
+            function (event) {
+
+                event.preventDefault();
+
+                updateProfilePreview();
+
+                const completeSection =
+                    document.querySelector("#profileComplete");
+
+                if (completeSection) {
+
+                    completeSection.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+
+                }
+
+            }
+        );
+
+    }
+
+
+    /* ========================================= */
+    /* FINISH PROFILE                            */
+    /* ========================================= */
+
+    const previewContinue =
+        document.querySelector("#previewContinue");
+
+
+    if (previewContinue) {
+
+        previewContinue.addEventListener(
+            "click",
+            function (event) {
+
+                event.preventDefault();
+
+                updateProfilePreview();
+
+                const completeSection =
+                    document.querySelector("#profileComplete");
+
+                if (completeSection) {
+
+                    completeSection.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+
+                }
+
+            }
+        );
+
+    }
+
+
+    /* ========================================= */
+    /* EDIT PROFILE                              */
+    /* ========================================= */
+
+    const editProfileBtn =
+        document.querySelector("#editProfileBtn");
+
+
+    if (editProfileBtn) {
+
+        editProfileBtn.addEventListener(
+            "click",
+            function (event) {
+
+                event.preventDefault();
+
+                goToProfileSection(".profile-about");
+
+            }
+        );
+
+    }
+
+
+    /* ========================================= */
+    /* PROFILE SECTION NAVIGATION                */
+    /* ========================================= */
+
+    function goToProfileSection(selector) {
+
+        const section =
+            document.querySelector(selector);
+
+        if (section) {
+
+            section.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
+        }
+
+    }
+
+
+    /* ========================================= */
+    /* INITIAL PREVIEW                           */
+    /* ========================================= */
+
+    updateProfilePreview();
+
+});
