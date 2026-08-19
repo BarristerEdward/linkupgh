@@ -984,30 +984,99 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    /* ========================================= */
-    /* PROFILE SECTION NAVIGATION                */
-    /* ========================================= */
+   /* ========================================= */
+/* PROFILE SECTION NAVIGATION                */
+/* ========================================= */
 
-    function goToProfileSection(selector) {
+function goToProfileSection(selector) {
 
-        const section =
-            document.querySelector(selector);
+    const section =
+        document.querySelector(selector);
 
-        if (section) {
+    if (section) {
 
-            section.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
-
-        }
+        section.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
 
     }
 
+}
 
-    /* ========================================= */
-    /* INITIAL PREVIEW                           */
-    /* ========================================= */
+
+/* ========================================= */
+/* STEP 01 — ABOUT YOU                       */
+/* ========================================= */
+
+const aboutYouContinue =
+    document.querySelector("#aboutYouContinue");
+
+
+if (aboutYouContinue) {
+
+    aboutYouContinue.addEventListener("click", function () {
+
+
+        const displayName =
+            document.querySelector("#displayName").value.trim();
+
+
+        const aboutMe =
+            document.querySelector("#aboutMe").value.trim();
+
+
+
+        if (!displayName) {
+
+            alert("Please enter your display name.");
+
+            return;
+
+        }
+
+
+
+        if (!aboutMe) {
+
+            alert("Please tell people a little about yourself.");
+
+            return;
+
+        }
+
+
+
+        /* Save profile information */
+
+        localStorage.setItem(
+            "linkup_displayName",
+            displayName
+        );
+
+
+        localStorage.setItem(
+            "linkup_aboutMe",
+            aboutMe
+        );
+
+
+
+        /* Move to Step 02 */
+
+        goToProfileSection(".profile-interests");
+
+
+    });
+
+}
+
+
+/* ========================================= */
+/* INITIAL PREVIEW                           */
+/* ========================================= */
+
+updateProfilePreview();
 
     updateProfilePreview();
 
