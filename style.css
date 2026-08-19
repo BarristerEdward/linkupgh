@@ -8921,3 +8921,177 @@ img {
         text-align: center;
     }
 }
+
+/* ========================================= */
+/* LINKUPGH — PROFILE BUILDER CSS            */
+/* PROFILE HEADER                            */
+/* ========================================= */
+
+.profile-header {
+
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+}
+
+
+.profile-header-container {
+
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+
+/* Logo */
+
+.profile-header .logo {
+
+    font-size: 28px;
+    font-weight: 800;
+    text-decoration: none;
+    color: #111111;
+
+}
+
+
+.profile-header .logo span {
+
+    color: #e91e63;
+
+}
+
+
+/* Progress */
+
+.profile-progress {
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+}
+
+
+.progress-step {
+
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    background: #eeeeee;
+    color: #777;
+
+}
+
+
+.progress-step.active {
+
+    background: #e91e63;
+    color: white;
+
+}
+
+
+.progress-line {
+
+    width: 45px;
+    height: 2px;
+    background: #dddddd;
+
+}
+
+
+/* Exit */
+
+.profile-exit {
+
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+
+}
+
+
+/* ========================================= */
+/* PROFILE MAIN                              */
+/* ========================================= */
+
+
+.profile-main {
+
+    padding: 70px 20px 40px;
+
+}
+
+
+.profile-welcome {
+
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+
+}
+
+
+.section-label {
+
+    display: inline-block;
+
+    color: #e91e63;
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.profile-welcome h1 {
+
+    font-size: 52px;
+    line-height: 1.1;
+
+    color: #111;
+
+}
+
+
+.profile-welcome h1 span {
+
+    color: #e91e63;
+
+}
+
+
+.profile-welcome p {
+
+    max-width: 600px;
+
+    margin: 20px auto;
+
+    color: #666;
+
+    font-size: 18px;
+    line-height: 1.6;
+
+}
