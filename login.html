@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | LinkUpGH</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="login-page">
+
+    <!-- ========================================= -->
+    <!-- NAVIGATION -->
+    <!-- ========================================= -->
+
+    <nav class="login-nav">
+
+        <a href="index.html" class="logo">
+            LinkUp<span>GH</span>
+        </a>
+
+        <div class="login-nav-right">
+            <span>New here?</span>
+            <a href="register.html">Create account</a>
+        </div>
+
+    </nav>
+
+
+    <!-- ========================================= -->
+    <!-- LOGIN MAIN -->
+    <!-- ========================================= -->
+
+    <main class="login-main">
+
+        <section class="login-card">
+
+            <!-- Decorative glow -->
+
+            <div class="login-glow"></div>
+
+
+            <!-- ========================================= -->
+            <!-- LOGIN HEADER -->
+            <!-- ========================================= -->
+
+            <div class="login-intro">
+
+                <div class="login-icon">
+                    ♡
+                </div>
+
+                <p class="login-eyebrow">
+                    WELCOME BACK
+                </p>
+
+                <h1>
+                    Your connections<br>
+                    are waiting.
+                </h1>
+
+                <p class="login-description">
+                    Sign in to continue your journey
+                    and discover meaningful connections
+                    across Ghana.
+                </p>
+
+            </div>
+
+
+            <!-- ========================================= -->
+            <!-- LOGIN FORM -->
+            <!-- ========================================= -->
+
+            <form id="loginForm" class="login-form">
+
+                <!-- Email / Username -->
+
+                <div class="form-group">
+
+                    <label for="loginEmail">
+                        Email or Username
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <span class="input-icon">
+                            @
+                        </span>
+
+                        <input
+                            type="text"
+                            id="loginEmail"
+                            name="loginEmail"
+                            placeholder="you@example.com"
+                            autocomplete="username"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- Password -->
+
+                <div class="form-group">
+
+                    <div class="label-row">
+
+                        <label for="loginPassword">
+                            Password
+                        </label>
+
+                        <a href="#" class="forgot-password">
+                            Forgot?
+                        </a>
+
+                    </div>
+
+                    <div class="input-wrapper">
+
+                        <span class="input-icon">
+                            •
+                        </span>
+
+                        <input
+                            type="password"
+                            id="loginPassword"
+                            name="loginPassword"
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            id="toggleLoginPassword"
+                            class="password-toggle"
+                        >
+                            Show
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Remember Me -->
+
+                <label class="remember-me">
+
+                    <input
+                        type="checkbox"
+                        id="rememberMe"
+                        name="rememberMe"
+                    >
+
+                    <span class="custom-checkbox"></span>
+
+                    <span>
+                        Keep me signed in
+                    </span>
+
+                </label>
+
+
+                <!-- Login Button -->
+
+                <button
+                    type="submit"
+                    class="login-button"
+                >
+                    <span>Continue to LinkUpGH</span>
+                    <span class="button-arrow">→</span>
+                </button>
+
+            </form>
+
+
+            <!-- ========================================= -->
+            <!-- DIVIDER -->
+            <!-- ========================================= -->
+
+            <div class="login-divider">
+                <span>or</span>
+            </div>
+
+
+            <!-- ========================================= -->
+            <!-- REGISTER CTA -->
+            <!-- ========================================= -->
+
+            <div class="register-cta">
+
+                <p>
+                    Don't have a LinkUpGH account?
+                </p>
+
+                <a href="register.html">
+                    Create your account
+                    <span>→</span>
+                </a>
+
+            </div>
+
+
+            <!-- ========================================= -->
+            <!-- TRUST MESSAGE -->
+            <!-- ========================================= -->
+
+            <div class="login-trust">
+
+                <span>🔒</span>
+
+                <p>
+                    Your information stays private.
+                    Always.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ========================================= -->
+    <!-- FOOTER -->
+    <!-- ========================================= -->
+
+    <footer class="login-footer">
+
+        <p>
+            © 2026 LinkUpGH
+        </p>
+
+        <div>
+
+            <a href="#">
+                Privacy
+            </a>
+
+            <a href="#">
+                Terms
+            </a>
+
+            <a href="#">
+                Safety
+            </a>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ========================================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ========================================= -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
