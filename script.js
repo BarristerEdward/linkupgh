@@ -1,9 +1,29 @@
 /* ========================================= */
 /* LINKUPGH — REGISTRATION JAVASCRIPT       */
-/* STEP 01 + STEP 02                        */
+/* STEP 01 → STEP 02 → STEP 03 → FINAL     */
 /* ========================================= */
 
 document.addEventListener("DOMContentLoaded", function () {
+
+    /* ========================================= */
+    /* HELPER — SCROLL TO SECTION               */
+    /* ========================================= */
+
+    function goToSection(selector) {
+
+        const section = document.querySelector(selector);
+
+        if (section) {
+
+            section.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
+        }
+
+    }
+
 
     /* ========================================= */
     /* STEP 01 — BASIC INFORMATION              */
@@ -33,6 +53,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.querySelector("#location").value;
 
 
+            /* Required fields */
+
             if (
                 !firstName ||
                 !dateOfBirth ||
@@ -46,6 +68,51 @@ document.addEventListener("DOMContentLoaded", function () {
 
             }
 
+
+            /* ================================= */
+            /* AGE CHECK                          */
+            /* ================================= */
+
+            const birthDate =
+                new Date(dateOfBirth);
+
+            const today =
+                new Date();
+
+            let age =
+                today.getFullYear() -
+                birthDate.getFullYear();
+
+            const monthDifference =
+                today.getMonth() -
+                birthDate.getMonth();
+
+
+            if (
+                monthDifference < 0 ||
+                (
+                    monthDifference === 0 &&
+                    today.getDate() < birthDate.getDate()
+                )
+            ) {
+
+                age--;
+
+            }
+
+
+            if (age < 18) {
+
+                alert(
+                    "You must be 18 or older to use LinkUpGH."
+                );
+
+                return;
+
+            }
+
+
+            /* Save information */
 
             localStorage.setItem(
                 "linkup_firstName",
@@ -68,17 +135,9 @@ document.addEventListener("DOMContentLoaded", function () {
             );
 
 
-            const accountSection =
-                document.querySelector(".account-details");
+            /* Move to Step 02 */
 
-
-            if (accountSection) {
-
-                accountSection.scrollIntoView({
-                    behavior: "smooth"
-                });
-
-            }
+            goToSection(".account-details");
 
         });
 
@@ -87,7 +146,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* ========================================= */
-    /* STEP 02 — ACCOUNT DETAILS                 */
+    /* STEP 02 — ACCOUNT DETAILS                */
     /* ========================================= */
 
     const accountForm =
@@ -117,9 +176,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.querySelector("#confirmPassword").value;
 
 
-            /* --------------------------------- */
-            /* Check required fields            */
-            /* --------------------------------- */
+            /* Required fields */
 
             if (
                 !email ||
@@ -136,9 +193,9 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
 
-            /* --------------------------------- */
-            /* Email validation                 */
-            /* --------------------------------- */
+            /* ================================= */
+            /* EMAIL VALIDATION                  */
+            /* ================================= */
 
             const emailPattern =
                 /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -146,16 +203,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (!emailPattern.test(email)) {
 
-                alert("Please enter a valid email address.");
+                alert(
+                    "Please enter a valid email address."
+                );
 
                 return;
 
             }
 
 
-            /* --------------------------------- */
-            /* Ghana phone validation           */
-            /* --------------------------------- */
+            /* ================================= */
+            /* GHANA PHONE VALIDATION            */
+            /* ================================= */
 
             const cleanPhone =
                 phone.replace(/\s+/g, "");
@@ -176,9 +235,9 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
 
-            /* --------------------------------- */
-            /* Username validation              */
-            /* --------------------------------- */
+            /* ================================= */
+            /* USERNAME VALIDATION               */
+            /* ================================= */
 
             const usernamePattern =
                 /^[a-zA-Z0-9_]{3,20}$/;
@@ -195,9 +254,9 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
 
-            /* --------------------------------- */
-            /* Password length                  */
-            /* --------------------------------- */
+            /* ================================= */
+            /* PASSWORD VALIDATION               */
+            /* ================================= */
 
             if (password.length < 8) {
 
@@ -210,10 +269,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
 
-            /* --------------------------------- */
-            /* Confirm password                 */
-            /* --------------------------------- */
-
             if (password !== confirmPassword) {
 
                 alert(
@@ -225,9 +280,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
 
-            /* --------------------------------- */
-            /* Save account information         */
-            /* --------------------------------- */
+            /* Save account information */
 
             localStorage.setItem(
                 "linkup_email",
@@ -245,21 +298,158 @@ document.addEventListener("DOMContentLoaded", function () {
             );
 
 
-            /* --------------------------------- */
-            /* Move to Step 03                  */
-            /* --------------------------------- */
+            /* Move to Step 03 */
 
-            const securitySection =
-                document.querySelector(".security-verification");
+            goToSection(".security-verification");
+
+        });
+
+    }
 
 
-            if (securitySection) {
 
-                securitySection.scrollIntoView({
-                    behavior: "smooth"
-                });
+    /* ========================================= */
+    /* STEP 03 — VERIFICATION CONTINUE         */
+    /* ========================================= */
+
+    const securityContinue =
+        document.querySelector(".security-continue");
+
+
+    if (securityContinue) {
+
+        securityContinue.addEventListener("click", function (event) {
+
+            event.preventDefault();
+
+            goToSection(".terms-consent");
+
+        });
+
+    }
+
+
+
+    /* ========================================= */
+    /* EMAIL / PHONE VERIFICATION BUTTONS      */
+    /* ========================================= */
+
+    const verificationButtons =
+        document.querySelectorAll(".verification-btn");
+
+
+    verificationButtons.forEach(function (button) {
+
+        button.addEventListener("click", function () {
+
+            alert(
+                "Verification will be available when the LinkUpGH backend is connected."
+            );
+
+        });
+
+    });
+
+
+
+    /* ========================================= */
+    /* FINAL STEP — TERMS & CONSENT             */
+    /* ========================================= */
+
+    const createAccountButton =
+        document.querySelector("#createAccountBtn");
+
+
+    if (createAccountButton) {
+
+        createAccountButton.addEventListener("click", function (event) {
+
+            event.preventDefault();
+
+
+            /* Required consent checkboxes */
+
+            const ageConfirmation =
+                document.querySelector("#ageConfirmation");
+
+            const termsAgreement =
+                document.querySelector("#termsAgreement");
+
+            const privacyAgreement =
+                document.querySelector("#privacyAgreement");
+
+            const communityGuidelines =
+                document.querySelector("#communityGuidelines");
+
+
+            if (!ageConfirmation.checked) {
+
+                alert(
+                    "Please confirm that you are 18 years old or older."
+                );
+
+                return;
 
             }
+
+
+            if (!termsAgreement.checked) {
+
+                alert(
+                    "Please agree to the LinkUpGH Terms of Service."
+                );
+
+                return;
+
+            }
+
+
+            if (!privacyAgreement.checked) {
+
+                alert(
+                    "Please read and accept the LinkUpGH Privacy Policy."
+                );
+
+                return;
+
+            }
+
+
+            if (!communityGuidelines.checked) {
+
+                alert(
+                    "Please agree to follow the LinkUpGH Community Guidelines."
+                );
+
+                return;
+
+            }
+
+
+            /* ================================= */
+            /* ACCOUNT CREATION                  */
+            /* ================================= */
+
+            localStorage.setItem(
+                "linkup_account_created",
+                "true"
+            );
+
+
+            localStorage.setItem(
+                "linkup_marketing_consent",
+                document.querySelector("#marketingConsent").checked
+            );
+
+
+            /* Move to success section */
+
+            goToSection("#account-success");
+
+
+            /* Update progress */
+
+            updateProgress(3);
 
         });
 
@@ -280,7 +470,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (passwordToggle && passwordInput) {
 
-        passwordToggle.addEventListener("click", function () {
+        passwordToggle.addEventListener("click", function (event) {
+
+            event.preventDefault();
+
 
             if (passwordInput.type === "password") {
 
@@ -288,11 +481,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 passwordToggle.textContent = "Hide";
 
+                passwordToggle.setAttribute(
+                    "aria-label",
+                    "Hide password"
+                );
+
             } else {
 
                 passwordInput.type = "password";
 
                 passwordToggle.textContent = "Show";
+
+                passwordToggle.setAttribute(
+                    "aria-label",
+                    "Show password"
+                );
 
             }
 
@@ -326,19 +529,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
                 if (password.length >= 8) {
+
                     strength++;
+
                 }
+
 
                 if (/[A-Z]/.test(password)) {
+
                     strength++;
+
                 }
+
 
                 if (/[0-9]/.test(password)) {
+
                     strength++;
+
                 }
 
+
                 if (/[^A-Za-z0-9]/.test(password)) {
+
                     strength++;
+
                 }
 
 
@@ -362,5 +576,45 @@ document.addEventListener("DOMContentLoaded", function () {
         );
 
     }
+
+
+
+    /* ========================================= */
+    /* PROGRESS INDICATOR                      */
+    /* ========================================= */
+
+    function updateProgress(step) {
+
+        const progressSteps =
+            document.querySelectorAll(
+                ".register-progress .progress-step"
+            );
+
+
+        progressSteps.forEach(
+            function (progressStep, index) {
+
+                if (index < step) {
+
+                    progressStep.classList.add("active");
+
+                } else {
+
+                    progressStep.classList.remove("active");
+
+                }
+
+            }
+        );
+
+    }
+
+
+
+    /* ========================================= */
+    /* INITIAL PROGRESS                         */
+    /* ========================================= */
+
+    updateProgress(1);
 
 });
