@@ -8555,3 +8555,17 @@ img {
     }
 
 }
+
+/* ========================================= */
+/* MOBILE INPUT ZOOM FIX                    */
+/* ========================================= */
+
+@media (max-width: 650px) {
+
+    input,
+    select,
+    textarea {
+        font-size: 16px !important;
+    }
+
+}
