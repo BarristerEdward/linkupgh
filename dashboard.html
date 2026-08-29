@@ -1,1 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
 
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Discover meaningful connections on LinkUpGH."
+    >
+
+    <title>Discover | LinkUpGH</title>
+
+    <!-- Existing global project styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Dashboard styles -->
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body class="dashboard-page">
+
+    <!-- ========================================= -->
+    <!-- DASHBOARD HEADER                          -->
+    <!-- ========================================= -->
+
+    <header class="dashboard-header">
+        <div class="dashboard-header-inner">
+
+            <a href="index.html" class="dashboard-logo" aria-label="LinkUpGH Home">
+                LinkUp<span>GH</span>
+            </a>
+
+            <nav class="desktop-nav" aria-label="Main navigation">
+                <a href="dashboard.html" class="nav-link active">Discover</a>
+                <a href="matches.html" class="nav-link">Matches</a>
+                <a href="messages.html" class="nav-link">Messages</a>
+            </nav>
+
+            <div class="header-actions">
+
+                <button
+                    class="icon-button notification-button"
+                    type="button"
+                    aria-label="View notifications"
+                >
+                    <span aria-hidden="true">♧</span>
+                    <span class="notification-dot"></span>
+                </button>
+
+                <button
+                    class="profile-menu-button"
+                    type="button"
+                    aria-label="Open profile menu"
+                >
+                    <span
+                        class="header-avatar"
+                        id="headerAvatar"
+                        aria-hidden="true"
+                    >
+                        😊
+                    </span>
+
+                    <span class="header-profile-name" id="headerProfileName">
+                        You
+                    </span>
+
+                    <span class="dropdown-indicator" aria-hidden="true">
+                        ▾
+                    </span>
+                </button>
+
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- ========================================= -->
+    <!-- MAIN DASHBOARD                            -->
+    <!-- ========================================= -->
+
+    <main class="dashboard-main">
+
+        <!-- ========================================= -->
+        <!-- WELCOME                                  -->
+        <!-- ========================================= -->
+
+        <section class="welcome-section">
+
+            <div class="welcome-content">
+
+                <span class="eyebrow">
+                    <span class="status-dot"></span>
+                    GOOD MORNING
+                </span>
+
+                <h1>
+                    Welcome back,
+                    <span id="welcomeName">there</span>.
+                </h1>
+
+                <p class="welcome-message">
+                    There are people waiting to connect with you.
+                </p>
+
+                <div class="location-indicator">
+                    <span aria-hidden="true">⌖</span>
+                    <span id="welcomeLocation">Your location</span>
+                </div>
+
+            </div>
+
+
+            <div class="welcome-quote">
+
+                <div class="quote-icon">“</div>
+
+                <p>
+                    Personality comes first.
+                    <br>
+                    <span>Talk first. See later.</span>
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================= -->
+        <!-- DASHBOARD GRID                            -->
+        <!-- ========================================= -->
+
+        <div class="dashboard-layout">
+
+
+            <!-- ========================================= -->
+            <!-- DISCOVER                                 -->
+            <!-- ========================================= -->
+
+            <section class="discover-section">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="section-label">
+                            DISCOVER
+                        </span>
+
+                        <h2>
+                            People you might
+                            <span>connect with.</span>
+                        </h2>
+
+                        <p>
+                            Based on your interests, preferences and personality.
+                        </p>
+                    </div>
+
+                    <button
+                        class="refresh-button"
+                        id="refreshDiscover"
+                        type="button"
+                    >
+                        <span aria-hidden="true">↻</span>
+                        Refresh
+                    </button>
+
+                </div>
+
+
+                <!-- Discover Cards -->
+
+                <div
+                    class="discover-grid"
+                    id="discoverGrid"
+                >
+
+                    <!-- Cards inserted by dashboard.js -->
+
+                </div>
+
+
+                <!-- Empty State -->
+
+                <div
+                    class="discover-empty hidden"
+                    id="discoverEmpty"
+                >
+
+                    <div class="empty-icon">♡</div>
+
+                    <h3>
+                        You've seen everyone for now.
+                    </h3>
+
+                    <p>
+                        Check back later for new people to discover.
+                    </p>
+
+                    <button
+                        class="primary-button"
+                        id="resetDiscover"
+                        type="button"
+                    >
+                        Discover again
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- ========================================= -->
+            <!-- DASHBOARD SIDEBAR                        -->
+            <!-- ========================================= -->
+
+            <aside class="dashboard-sidebar">
+
+
+                <!-- ========================================= -->
+                <!-- PROFILE COMPLETION                       -->
+                <!-- ========================================= -->
+
+                <section class="sidebar-card profile-status-card">
+
+                    <span class="sidebar-label">
+                        YOUR PROFILE
+                    </span>
+
+                    <div class="profile-status-heading">
+
+                        <div>
+                            <h3>
+                                Profile complete
+                            </h3>
+
+                            <p>
+                                Your profile is ready to be discovered.
+                            </p>
+                        </div>
+
+                        <strong>
+                            100%
+                        </strong>
+
+                    </div>
+
+                    <div
+                        class="progress-track"
+                        aria-label="Profile completion 100 percent"
+                    >
+                        <div
+                            class="progress-fill"
+                            style="width: 100%;"
+                        ></div>
+                    </div>
+
+                    <a
+                        href="profile.html"
+                        class="sidebar-link"
+                    >
+                        Edit Profile
+                        <span aria-hidden="true">→</span>
+                    </a>
+
+                </section>
+
+
+                <!-- ========================================= -->
+                <!-- PRIVACY                                  -->
+                <!-- ========================================= -->
+
+                <section class="sidebar-card privacy-card">
+
+                    <div class="privacy-icon">
+                        🔒
+                    </div>
+
+                    <span class="sidebar-label">
+                        PRIVACY
+                    </span>
+
+                    <h3>
+                        Your privacy matters.
+                    </h3>
+
+                    <p>
+                        Your real photo remains private until you choose to reveal it.
+                    </p>
+
+                    <span class="privacy-note">
+                        Your privacy stays in your hands.
+                    </span>
+
+                </section>
+
+
+                <!-- ========================================= -->
+                <!-- RECENT CONVERSATIONS                     -->
+                <!-- ========================================= -->
+
+                <section class="sidebar-card conversations-card">
+
+                    <div class="sidebar-card-header">
+
+                        <div>
+                            <span class="sidebar-label">
+                                MESSAGES
+                            </span>
+
+                            <h3>
+                                Recent conversations
+                            </h3>
+                        </div>
+
+                        <a
+                            href="messages.html"
+                            class="small-link"
+                        >
+                            View all
+                        </a>
+
+                    </div>
+
+
+                    <div class="conversation-list">
+
+
+                        <a
+                            href="messages.html"
+                            class="conversation-item unread"
+                        >
+
+                            <div class="conversation-avatar">
+                                😊
+                            </div>
+
+                            <div class="conversation-content">
+
+                                <div class="conversation-top">
+
+                                    <strong>Ama</strong>
+
+                                    <time datetime="PT2M">
+                                        2m
+                                    </time>
+
+                                </div>
+
+                                <p>
+                                    Hey, how's your day going?
+                                </p>
+
+                            </div>
+
+                            <span class="unread-dot"></span>
+
+                        </a>
+
+
+                        <a
+                            href="messages.html"
+                            class="conversation-item"
+                        >
+
+                            <div class="conversation-avatar">
+                                😎
+                            </div>
+
+                            <div class="conversation-content">
+
+                                <div class="conversation-top">
+
+                                    <strong>Kojo</strong>
+
+                                    <time datetime="PT18M">
+                                        18m
+                                    </time>
+
+                                </div>
+
+                                <p>
+                                    That football conversation 😂
+                                </p>
+
+                            </div>
+
+                        </a>
+
+
+                        <a
+                            href="messages.html"
+                            class="conversation-item"
+                        >
+
+                            <div class="conversation-avatar">
+                                🌸
+                            </div>
+
+                            <div class="conversation-content">
+
+                                <div class="conversation-top">
+
+                                    <strong>Abena</strong>
+
+                                    <time datetime="PT1H">
+                                        1h
+                                    </time>
+
+                                </div>
+
+                                <p>
+                                    I actually agree with you.
+                                </p>
+
+                            </div>
+
+                        </a>
+
+
+                    </div>
+
+                </section>
+
+            </aside>
+
+        </div>
+
+
+        <!-- ========================================= -->
+        <!-- POTENTIAL CONNECTIONS                     -->
+        <!-- ========================================= -->
+
+        <section class="connections-section">
+
+            <div class="section-heading compact-heading">
+
+                <div>
+
+                    <span class="section-label">
+                        CONNECTIONS
+                    </span>
+
+                    <h2>
+                        Potential connections
+                    </h2>
+
+                    <p>
+                        People you may have something meaningful in common with.
+                    </p>
+
+                </div>
+
+                <a
+                    href="matches.html"
+                    class="text-link"
+                >
+                    See matches
+                    <span aria-hidden="true">→</span>
+                </a>
+
+            </div>
+
+
+            <div class="connections-grid">
+
+
+                <article class="connection-card">
+
+                    <div class="connection-avatar">
+                        😊
+                    </div>
+
+                    <div class="connection-info">
+
+                        <h3>
+                            Ama
+                        </h3>
+
+                        <span>
+                            ⌖ Kumasi
+                        </span>
+
+                    </div>
+
+                    <div class="compatibility">
+
+                        <strong>
+                            92%
+                        </strong>
+
+                        <span>
+                            compatible
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="connection-card">
+
+                    <div class="connection-avatar">
+                        😎
+                    </div>
+
+                    <div class="connection-info">
+
+                        <h3>
+                            Kojo
+                        </h3>
+
+                        <span>
+                            ⌖ Accra
+                        </span>
+
+                    </div>
+
+                    <div class="compatibility">
+
+                        <strong>
+                            88%
+                        </strong>
+
+                        <span>
+                            compatible
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="connection-card">
+
+                    <div class="connection-avatar">
+                        🌸
+                    </div>
+
+                    <div class="connection-info">
+
+                        <h3>
+                            Abena
+                        </h3>
+
+                        <span>
+                            ⌖ Cape Coast
+                        </span>
+
+                    </div>
+
+                    <div class="compatibility">
+
+                        <strong>
+                            85%
+                        </strong>
+
+                        <span>
+                            compatible
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="connection-card">
+
+                    <div class="connection-avatar">
+                        🤓
+                    </div>
+
+                    <div class="connection-info">
+
+                        <h3>
+                            Kwame
+                        </h3>
+
+                        <span>
+                            ⌖ Takoradi
+                        </span>
+
+                    </div>
+
+                    <div class="compatibility">
+
+                        <strong>
+                            81%
+                        </strong>
+
+                        <span>
+                            compatible
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ========================================= -->
+    <!-- MOBILE NAVIGATION                         -->
+    <!-- ========================================= -->
+
+    <nav
+        class="mobile-bottom-nav"
+        aria-label="Mobile navigation"
+    >
+
+        <a
+            href="dashboard.html"
+            class="mobile-nav-item active"
+            aria-current="page"
+        >
+            <span class="mobile-nav-icon">⌂</span>
+            <span>Discover</span>
+        </a>
+
+        <a
+            href="matches.html"
+            class="mobile-nav-item"
+        >
+            <span class="mobile-nav-icon">♥</span>
+            <span>Matches</span>
+        </a>
+
+        <a
+            href="messages.html"
+            class="mobile-nav-item"
+        >
+            <span class="mobile-nav-icon">💬</span>
+            <span>Messages</span>
+        </a>
+
+        <a
+            href="profile.html"
+            class="mobile-nav-item"
+        >
+            <span
+                class="mobile-profile-avatar"
+                id="mobileAvatar"
+            >
+                😊
+            </span>
+
+            <span>Profile</span>
+        </a>
+
+    </nav>
+
+
+    <!-- Dashboard JavaScript -->
+    <script src="dashboard.js"></script>
+
+</body>
+</html>
