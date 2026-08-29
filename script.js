@@ -457,51 +457,76 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-    /* ========================================= */
-    /* SHOW / HIDE PASSWORD                     */
-    /* ========================================= */
+ /* ========================================= */
+/* SHOW / HIDE PASSWORD                     */
+/* ========================================= */
 
-    const passwordToggle =
-        document.querySelector(".password-toggle");
+const passwordToggle =
+    document.querySelector("#togglePassword");
 
-    const passwordInput =
-        document.querySelector("#password");
-
-
-    if (passwordToggle && passwordInput) {
-
-        passwordToggle.addEventListener("click", function (event) {
-
-            event.preventDefault();
+const passwordInput =
+    document.querySelector("#password");
 
 
-            if (passwordInput.type === "password") {
+if (passwordToggle && passwordInput) {
 
-                passwordInput.type = "text";
+    passwordToggle.addEventListener("click", function (event) {
 
-                passwordToggle.textContent = "Hide";
+        event.preventDefault();
 
-                passwordToggle.setAttribute(
-                    "aria-label",
-                    "Hide password"
-                );
+        if (passwordInput.type === "password") {
 
-            } else {
+            passwordInput.type = "text";
 
-                passwordInput.type = "password";
+            passwordToggle.textContent = "Hide";
 
-                passwordToggle.textContent = "Show";
+        } else {
 
-                passwordToggle.setAttribute(
-                    "aria-label",
-                    "Show password"
-                );
+            passwordInput.type = "password";
 
-            }
+            passwordToggle.textContent = "Show";
 
-        });
+        }
 
-    }
+    });
+
+}
+
+
+/* ========================================= */
+/* LOGIN — SHOW / HIDE PASSWORD             */
+/* ========================================= */
+
+const loginPasswordToggle =
+    document.querySelector("#toggleLoginPassword");
+
+const loginPasswordInput =
+    document.querySelector("#loginPassword");
+
+
+if (loginPasswordToggle && loginPasswordInput) {
+
+    loginPasswordToggle.addEventListener("click", function (event) {
+
+        event.preventDefault();
+
+        if (loginPasswordInput.type === "password") {
+
+            loginPasswordInput.type = "text";
+
+            loginPasswordToggle.textContent = "Hide";
+
+        } else {
+
+            loginPasswordInput.type = "password";
+
+            loginPasswordToggle.textContent = "Show";
+
+        }
+
+    });
+
+}
 
 
 
