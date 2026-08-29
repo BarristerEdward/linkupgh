@@ -1103,6 +1103,439 @@ if (aboutYouContinue) {
 
 updateProfilePreview();
 
-    updateProfilePreview();
+
+/* ========================================= */
+/* STEP 02 — INTERESTS & HOBBIES             */
+/* ========================================= */
+
+const interestButtons =
+    document.querySelectorAll(".interest-option");
+
+const interestCount =
+    document.querySelector("#interestCount");
+
+const hobbyCount =
+    document.querySelector("#hobbyCount");
+
+
+interestButtons.forEach(function (button) {
+
+    button.addEventListener("click", function () {
+
+        button.classList.toggle("active");
+
+        const selectedInterests =
+            document.querySelectorAll(
+                ".interest-option.active[data-interest]"
+            ).length;
+
+        const selectedHobbies =
+            document.querySelectorAll(
+                ".interest-option.active[data-hobby]"
+            ).length;
+
+
+        if (interestCount) {
+            interestCount.textContent = selectedInterests;
+        }
+
+        if (hobbyCount) {
+            hobbyCount.textContent = selectedHobbies;
+        }
+
+    });
+
+});
+
+
+const interestsContinue =
+    document.querySelector("#interestsContinue");
+
+
+if (interestsContinue) {
+
+    interestsContinue.addEventListener("click", function () {
+
+        const selectedInterests =
+            document.querySelectorAll(
+                ".interest-option.active[data-interest]"
+            );
+
+        const selectedHobbies =
+            document.querySelectorAll(
+                ".interest-option.active[data-hobby]"
+            );
+
+
+        if (selectedInterests.length < 3) {
+
+            alert("Please choose at least 3 interests.");
+
+            return;
+
+        }
+
+
+        const interests = [];
+
+        selectedInterests.forEach(function (item) {
+            interests.push(item.dataset.interest);
+        });
+
+
+        const hobbies = [];
+
+        selectedHobbies.forEach(function (item) {
+            hobbies.push(item.dataset.hobby);
+        });
+
+
+        localStorage.setItem(
+            "linkup_interests",
+            JSON.stringify(interests)
+        );
+
+        localStorage.setItem(
+            "linkup_hobbies",
+            JSON.stringify(hobbies)
+        );
+
+
+        goToProfileSection(".profile-personality");
+
+    });
+
+}
+
+
+/* ========================================= */
+/* STEP 03 — PERSONALITY                     */
+/* ========================================= */
+
+const personalityOptions =
+    document.querySelectorAll(".personality-option");
+
+
+personalityOptions.forEach(function (button) {
+
+    button.addEventListener("click", function () {
+
+        personalityOptions.forEach(function (item) {
+            item.classList.remove("active");
+        });
+
+        button.classList.add("active");
+
+    });
+
+});
+
+
+const personalityTags =
+    document.querySelectorAll(".personality-tag");
+
+
+personalityTags.forEach(function (button) {
+
+    button.addEventListener("click", function () {
+
+        button.classList.toggle("active");
+
+        const conversationCount =
+            document.querySelectorAll(
+                ".personality-tag.active[data-conversation]"
+            ).length;
+
+        const traitCount =
+            document.querySelectorAll(
+                ".personality-tag.active[data-trait]"
+            ).length;
+
+
+        const conversationCounter =
+            document.querySelector("#conversationCount");
+
+        const traitCounter =
+            document.querySelector("#traitCount");
+
+
+        if (conversationCounter) {
+            conversationCounter.textContent = conversationCount;
+        }
+
+        if (traitCounter) {
+            traitCounter.textContent = traitCount;
+        }
+
+    });
+
+});
+
+
+const personalityContinue =
+    document.querySelector("#personalityContinue");
+
+
+if (personalityContinue) {
+
+    personalityContinue.addEventListener("click", function () {
+
+        const personality =
+            document.querySelector(
+                ".personality-option.active"
+            );
+
+
+        if (!personality) {
+
+            alert("Please choose your personality type.");
+
+            return;
+
+        }
+
+
+        localStorage.setItem(
+            "linkup_personality",
+            personality.dataset.personality
+        );
+
+
+        goToProfileSection(".profile-looking-for");
+
+    });
+
+}
+
+
+/* ========================================= */
+/* STEP 04 — LOOKING FOR                     */
+/* ========================================= */
+
+const lookingForOptions =
+    document.querySelectorAll(".looking-for-option");
+
+
+lookingForOptions.forEach(function (button) {
+
+    button.addEventListener("click", function () {
+
+        lookingForOptions.forEach(function (item) {
+            item.classList.remove("active");
+        });
+
+        button.classList.add("active");
+
+    });
+
+});
+
+
+const lookingForContinue =
+    document.querySelector("#lookingForContinue");
+
+
+if (lookingForContinue) {
+
+    lookingForContinue.addEventListener("click", function () {
+
+        const selectedLookingFor =
+            document.querySelector(
+                ".looking-for-option.active"
+            );
+
+
+        if (!selectedLookingFor) {
+
+            alert("Please choose what you're looking for.");
+
+            return;
+
+        }
+
+
+        localStorage.setItem(
+            "linkup_lookingFor",
+            selectedLookingFor.dataset.lookingFor
+        );
+
+
+        goToProfileSection(".profile-preferences");
+
+    });
+
+}
+
+
+/* ========================================= */
+/* STEP 05 — PREFERENCES                     */
+/* ========================================= */
+
+const preferenceOptions =
+    document.querySelectorAll(".preference-option");
+
+
+preferenceOptions.forEach(function (button) {
+
+    button.addEventListener("click", function () {
+
+        if (button.dataset.preference) {
+
+            document
+                .querySelectorAll(
+                    ".preference-option[data-preference]"
+                )
+                .forEach(function (item) {
+                    item.classList.remove("active");
+                });
+
+        }
+
+        button.classList.toggle("active");
+
+    });
+
+});
+
+
+const preferencesContinue =
+    document.querySelector("#preferencesContinue");
+
+
+if (preferencesContinue) {
+
+    preferencesContinue.addEventListener("click", function () {
+
+        const preference =
+            document.querySelector(
+                ".preference-option.active[data-preference]"
+            );
+
+
+        if (!preference) {
+
+            alert("Please choose who you're interested in.");
+
+            return;
+
+        }
+
+
+        goToProfileSection(".profile-avatar");
+
+    });
+
+}
+
+
+/* ========================================= */
+/* STEP 06 — AVATAR                          */
+/* ========================================= */
+
+const avatarContinue =
+    document.querySelector("#avatarContinue");
+
+
+if (avatarContinue) {
+
+    avatarContinue.addEventListener("click", function () {
+
+        const selectedAvatarOption =
+            document.querySelector(
+                ".avatar-option.active"
+            );
+
+
+        if (!selectedAvatarOption) {
+
+            alert("Please choose an avatar.");
+
+            return;
+
+        }
+
+
+        localStorage.setItem(
+            "linkup_avatar",
+            selectedAvatarOption.dataset.avatar
+        );
+
+
+        goToProfileSection(".photo-reveal-settings");
+
+    });
+
+}
+
+
+/* ========================================= */
+/* STEP 07 — PHOTO REVEAL                    */
+/* ========================================= */
+
+const revealOptions =
+    document.querySelectorAll(".reveal-option");
+
+
+revealOptions.forEach(function (button) {
+
+    button.addEventListener("click", function () {
+
+        revealOptions.forEach(function (item) {
+            item.classList.remove("active");
+        });
+
+        button.classList.add("active");
+
+    });
+
+});
+
+
+const revealContinue =
+    document.querySelector("#revealContinue");
+
+
+if (revealContinue) {
+
+    revealContinue.addEventListener("click", function () {
+
+        const selectedReveal =
+            document.querySelector(
+                ".reveal-option.active"
+            );
+
+
+        if (!selectedReveal) {
+
+            alert(
+                "Please choose a photo reveal setting."
+            );
+
+            return;
+
+        }
+
+
+        localStorage.setItem(
+            "linkup_photoReveal",
+            selectedReveal.dataset.reveal
+        );
+
+
+        updateProfilePreview();
+
+
+        goToProfileSection("#profile-preview");
+
+    });
+
+}
+
+
+/* ========================================= */
+/* FINAL PREVIEW                             */
+/* ========================================= */
+
+updateProfilePreview();
 
 });
