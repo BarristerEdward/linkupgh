@@ -4186,7 +4186,7 @@ img {
 }
 
 /* ========================================= */
-/* 08 — GHANA 🇬🇭                          */
+/* 08 — BUILT FOR GHANA 🇬🇭                */
 /* ========================================= */
 
 .ghana-section {
@@ -4203,7 +4203,7 @@ img {
 
 
 /* ========================================= */
-/* GHANA BACKGROUND GLOW                    */
+/* BACKGROUND GLOW                          */
 /* ========================================= */
 
 .ghana-section::before {
@@ -4233,7 +4233,7 @@ img {
 
 
 /* ========================================= */
-/* GHANA CONTAINER                          */
+/* CONTAINER                                */
 /* ========================================= */
 
 .ghana-container {
@@ -4242,27 +4242,40 @@ img {
 
     z-index: 2;
 
+    width: min(1120px, calc(100% - 40px));
+
+    margin: 0 auto;
+
 }
 
 
 /* ========================================= */
-/* GHANA HEADER                             */
+/* GHANA HEADING                            */
 /* ========================================= */
 
-.ghana-header {
+.ghana-heading {
 
-    max-width: 720px;
+    max-width: 760px;
 
-    margin: 0 auto 70px;
+    margin: 0 auto 75px;
 
     text-align: center;
 
 }
 
 
-.ghana-header h2 {
+.ghana-heading .section-label {
 
-    margin: 18px 0 22px;
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+}
+
+
+.ghana-heading h2 {
+
+    margin: 0 0 22px;
 
     font-family: var(--font-heading);
 
@@ -4277,16 +4290,16 @@ img {
 }
 
 
-.ghana-header h2 span {
+.ghana-heading h2 span {
 
-    color: var(--gold);
+    color: var(--green);
 
 }
 
 
-.ghana-header p {
+.ghana-heading p {
 
-    max-width: 600px;
+    max-width: 650px;
 
     margin: 0 auto;
 
@@ -4300,18 +4313,18 @@ img {
 
 
 /* ========================================= */
-/* GHANA IDENTITY                           */
+/* GHANA EXPERIENCE                         */
 /* ========================================= */
 
-.ghana-identity {
+.ghana-experience {
 
     display: grid;
 
     grid-template-columns:
-        minmax(0, 0.8fr)
-        minmax(0, 1.2fr);
+        minmax(0, 0.9fr)
+        minmax(0, 1.1fr);
 
-    gap: 25px;
+    gap: 28px;
 
     align-items: stretch;
 
@@ -4319,22 +4332,31 @@ img {
 
 
 /* ========================================= */
-/* GHANA STORY CARD                         */
+/* GHANA VISUAL                             */
 /* ========================================= */
 
-.ghana-story {
+.ghana-visual {
+
+    min-width: 0;
+
+}
+
+
+/* ========================================= */
+/* MAIN GHANA CARD                          */
+/* ========================================= */
+
+.ghana-card {
 
     position: relative;
 
-    min-height: 480px;
+    min-height: 500px;
 
     display: flex;
 
     flex-direction: column;
 
-    justify-content: flex-end;
-
-    padding: 38px;
+    padding: 36px;
 
     background:
         linear-gradient(
@@ -4352,11 +4374,9 @@ img {
 }
 
 
-/* ========================================= */
-/* GHANA FLAG ACCENT                        */
-/* ========================================= */
+/* Ghana flag line */
 
-.ghana-story::before {
+.ghana-card::before {
 
     content: "";
 
@@ -4382,37 +4402,26 @@ img {
 }
 
 
-/* ========================================= */
-/* GHANA DECORATIVE STAR                   */
-/* ========================================= */
+/* Decorative glow */
 
-.ghana-story::after {
+.ghana-card::after {
 
-    content: "✦";
+    content: "";
 
     position: absolute;
 
-    top: 55px;
-    right: 45px;
+    width: 260px;
+    height: 260px;
 
-    width: 110px;
-    height: 110px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    color: var(--gold);
+    right: -100px;
+    top: 70px;
 
     background:
-        rgba(214, 181, 109, 0.06);
-
-    border: 1px solid rgba(214, 181, 109, 0.12);
-
-    border-radius: 50%;
-
-    font-size: 2.5rem;
+        radial-gradient(
+            circle,
+            rgba(214, 181, 109, 0.10),
+            transparent 70%
+        );
 
     pointer-events: none;
 
@@ -4420,56 +4429,160 @@ img {
 
 
 /* ========================================= */
-/* GHANA STORY CONTENT                     */
+/* CARD TOP                                */
 /* ========================================= */
 
-.ghana-story-label {
+.ghana-card-top {
 
-    display: block;
+    position: relative;
 
-    margin-bottom: 15px;
+    z-index: 2;
 
-    color: var(--gold);
+    display: flex;
 
-    font-size: 0.7rem;
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: auto;
+
+}
+
+
+/* Ghana badge */
+
+.ghana-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 8px 12px;
+
+    color: var(--text-primary);
+
+    background:
+        rgba(255, 255, 255, 0.045);
+
+    border: 1px solid var(--border-light);
+
+    border-radius: 999px;
+
+    font-size: 0.68rem;
 
     font-weight: 700;
 
-    letter-spacing: 0.14em;
-
-    text-transform: uppercase;
+    letter-spacing: 0.08em;
 
 }
 
 
-.ghana-story h3 {
+/* Community status */
 
-    max-width: 430px;
+.ghana-online {
 
-    margin: 0 0 15px;
+    color: var(--green-light);
 
-    font-family: var(--font-heading);
+    font-size: 0.68rem;
+
+    font-weight: 600;
+
+}
+
+
+.ghana-online::first-letter {
+
+    color: var(--green);
+
+}
+
+
+/* ========================================= */
+/* GHANA SYMBOL                            */
+/* ========================================= */
+
+.ghana-symbol {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 82px;
+    height: 82px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 55px;
+    margin-bottom: 25px;
+
+    color: var(--gold);
+
+    background:
+        rgba(214, 181, 109, 0.07);
+
+    border: 1px solid rgba(214, 181, 109, 0.14);
+
+    border-radius: 50%;
 
     font-size: 2rem;
 
+}
+
+
+/* ========================================= */
+/* GHANA CARD TEXT                         */
+/* ========================================= */
+
+.ghana-card h3 {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 480px;
+
+    margin: 0 0 16px;
+
+    font-family: var(--font-heading);
+
+    font-size: 2.25rem;
+
     font-weight: 800;
 
-    line-height: 1.12;
+    line-height: 1.08;
 
-    letter-spacing: -0.04em;
+    letter-spacing: -0.045em;
 
 }
 
 
-.ghana-story p {
+.ghana-card h3 span {
 
-    max-width: 440px;
+    color: var(--green);
+
+}
+
+
+.ghana-card p {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 470px;
 
     margin: 0;
 
     color: var(--text-secondary);
 
-    font-size: 0.88rem;
+    font-size: 0.9rem;
 
     line-height: 1.75;
 
@@ -4477,127 +4590,57 @@ img {
 
 
 /* ========================================= */
-/* GHANA CITIES CARD                       */
+/* GHANA LOCATIONS                          */
 /* ========================================= */
 
-.ghana-cities {
+.ghana-locations {
 
-    min-height: 480px;
+    position: relative;
 
-    padding: 38px;
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(255, 255, 255, 0.055),
-            rgba(255, 255, 255, 0.015)
-        );
-
-    border: 1px solid var(--border);
-
-    border-radius: var(--radius-lg);
-
-}
-
-
-/* ========================================= */
-/* CITIES HEADER                            */
-/* ========================================= */
-
-.ghana-cities-header {
+    z-index: 2;
 
     display: flex;
 
-    align-items: flex-end;
+    flex-wrap: wrap;
 
-    justify-content: space-between;
+    gap: 9px;
 
-    gap: 20px;
-
-    margin-bottom: 32px;
+    margin-top: 30px;
 
 }
 
 
-.ghana-cities-header h3 {
+.ghana-locations span {
 
-    margin: 0;
-
-    font-family: var(--font-heading);
-
-    font-size: 1.4rem;
-
-    font-weight: 700;
-
-    letter-spacing: -0.03em;
-
-}
-
-
-.ghana-cities-header p {
-
-    margin: 0;
-
-    color: var(--text-muted);
-
-    font-size: 0.72rem;
-
-}
-
-
-/* ========================================= */
-/* CITY GRID                                */
-/* ========================================= */
-
-.city-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, minmax(0, 1fr));
-
-    gap: 10px;
-
-}
-
-
-.city-grid span {
-
-    display: flex;
+    display: inline-flex;
 
     align-items: center;
 
     justify-content: center;
 
-    min-height: 52px;
-
-    padding: 10px;
+    padding: 8px 13px;
 
     color: var(--text-secondary);
 
     background:
-        rgba(255, 255, 255, 0.025);
+        rgba(255, 255, 255, 0.035);
 
     border: 1px solid var(--border);
 
-    border-radius: 12px;
+    border-radius: 999px;
 
-    font-size: 0.75rem;
-
-    font-weight: 500;
-
-    text-align: center;
+    font-size: 0.68rem;
 
     transition:
-        color var(--transition),
         background var(--transition),
         border-color var(--transition),
+        color var(--transition),
         transform var(--transition);
 
 }
 
 
-.city-grid span:hover {
+.ghana-locations span:hover {
 
     color: var(--text-primary);
 
@@ -4613,10 +4656,132 @@ img {
 
 
 /* ========================================= */
-/* GHANA COMMUNITY STAT                    */
+/* GHANA VALUES                             */
 /* ========================================= */
 
-.ghana-stat {
+.ghana-values {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.045),
+            rgba(255, 255, 255, 0.015)
+        );
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius-lg);
+
+    overflow: hidden;
+
+}
+
+
+/* ========================================= */
+/* GHANA VALUE ITEM                         */
+/* ========================================= */
+
+.ghana-value {
+
+    display: grid;
+
+    grid-template-columns: 45px minmax(0, 1fr);
+
+    gap: 18px;
+
+    padding: 30px 32px;
+
+    border-bottom: 1px solid var(--border);
+
+    transition:
+        background var(--transition);
+
+}
+
+
+.ghana-value:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.ghana-value:hover {
+
+    background:
+        rgba(24, 196, 124, 0.035);
+
+}
+
+
+/* ========================================= */
+/* VALUE NUMBER                             */
+/* ========================================= */
+
+.ghana-value-number {
+
+    padding-top: 3px;
+
+    color: var(--green);
+
+    font-family: var(--font-heading);
+
+    font-size: 0.7rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+
+}
+
+
+/* ========================================= */
+/* VALUE CONTENT                            */
+/* ========================================= */
+
+.ghana-value h3 {
+
+    margin: 0 0 8px;
+
+    font-family: var(--font-heading);
+
+    font-size: 1.15rem;
+
+    font-weight: 700;
+
+    line-height: 1.3;
+
+    letter-spacing: -0.025em;
+
+}
+
+
+.ghana-value p {
+
+    max-width: 560px;
+
+    margin: 0;
+
+    color: var(--text-secondary);
+
+    font-size: 0.82rem;
+
+    line-height: 1.7;
+
+}
+
+
+/* ========================================= */
+/* GHANA CLOSING STATEMENT                  */
+/* ========================================= */
+
+.ghana-statement {
 
     display: flex;
 
@@ -4624,153 +4789,47 @@ img {
 
     justify-content: center;
 
-    gap: 12px;
+    gap: 13px;
 
-    margin-top: 45px;
+    margin-top: 55px;
 
     text-align: center;
 
 }
 
 
-.ghana-stat-line {
+.ghana-statement > span {
 
-    width: 50px;
-
-    height: 1px;
-
-    background: var(--border-light);
+    font-size: 1.15rem;
 
 }
 
 
-.ghana-stat p {
+.ghana-statement p {
 
     margin: 0;
 
     color: var(--text-muted);
 
-    font-size: 0.75rem;
+    font-size: 0.78rem;
 
 }
 
 
-.ghana-stat strong {
+.ghana-statement strong {
 
     color: var(--text-primary);
-
-}
-
-
-/* ========================================= */
-/* GHANA CTA                                */
-/* ========================================= */
-
-.ghana-cta {
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    gap: 15px;
-
-    margin-top: 55px;
-
-}
-
-
-.ghana-cta a {
-
-    display: inline-flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    min-height: 50px;
-
-    padding: 0 24px;
-
-    color: inherit;
-
-    border-radius: 999px;
-
-    font-size: 0.85rem;
 
     font-weight: 700;
 
-    text-decoration: none;
-
-    transition:
-        transform var(--transition),
-        background var(--transition),
-        border-color var(--transition),
-        box-shadow var(--transition);
-
 }
 
 
 /* ========================================= */
-/* GHANA PRIMARY BUTTON                    */
+/* TABLET                                   */
 /* ========================================= */
 
-.ghana-primary-btn {
-
-    color: #06130d;
-
-    background: var(--green);
-
-}
-
-
-.ghana-primary-btn:hover {
-
-    background: var(--green-light);
-
-    transform: translateY(-3px);
-
-    box-shadow:
-        0 12px 30px rgba(24, 196, 124, 0.18);
-
-}
-
-
-/* ========================================= */
-/* GHANA SECONDARY BUTTON                  */
-/* ========================================= */
-
-.ghana-secondary-btn {
-
-    color: var(--text-primary);
-
-    background:
-        rgba(255, 255, 255, 0.04);
-
-    border: 1px solid var(--border-light);
-
-}
-
-
-.ghana-secondary-btn:hover {
-
-    background:
-        rgba(255, 255, 255, 0.08);
-
-    border-color:
-        rgba(255, 255, 255, 0.18);
-
-    transform: translateY(-3px);
-
-}
-
-
-/* ========================================= */
-/* RESPONSIVE — TABLET                     */
-/* ========================================= */
-
-@media (max-width: 850px) {
+@media (max-width: 900px) {
 
     .ghana-section {
 
@@ -4779,24 +4838,32 @@ img {
     }
 
 
-    .ghana-identity {
+    .ghana-container {
+
+        width: min(100% - 40px, 720px);
+
+    }
+
+
+    .ghana-heading {
+
+        margin-bottom: 55px;
+
+    }
+
+
+    .ghana-experience {
 
         grid-template-columns: 1fr;
 
-    }
-
-
-    .ghana-story,
-    .ghana-cities {
-
-        min-height: auto;
+        gap: 22px;
 
     }
 
 
-    .ghana-story {
+    .ghana-card {
 
-        min-height: 400px;
+        min-height: 430px;
 
     }
 
@@ -4804,7 +4871,7 @@ img {
 
 
 /* ========================================= */
-/* RESPONSIVE — MOBILE                     */
+/* MOBILE                                   */
 /* ========================================= */
 
 @media (max-width: 600px) {
@@ -4816,27 +4883,41 @@ img {
     }
 
 
-    .ghana-header {
+    .ghana-container {
 
-        margin-bottom: 50px;
+        width: calc(100% - 32px);
 
     }
 
 
-    .ghana-header h2 {
+    .ghana-heading {
 
-        margin-top: 15px;
+        margin-bottom: 42px;
 
-        margin-bottom: 18px;
+        text-align: left;
 
-        font-size: 2.65rem;
+    }
+
+
+    .ghana-heading .section-label {
+
+        margin-bottom: 15px;
+
+    }
+
+
+    .ghana-heading h2 {
+
+        margin-bottom: 17px;
+
+        font-size: 2.55rem;
 
         line-height: 1.06;
 
     }
 
 
-    .ghana-header p {
+    .ghana-heading p {
 
         font-size: 0.9rem;
 
@@ -4845,106 +4926,157 @@ img {
     }
 
 
-    .ghana-story {
+    .ghana-experience {
 
-        min-height: 390px;
+        gap: 18px;
+
+    }
+
+
+    /* Main card */
+
+    .ghana-card {
+
+        min-height: auto;
 
         padding: 27px;
 
     }
 
 
-    .ghana-story::after {
-
-        top: 30px;
-
-        right: 25px;
-
-        width: 80px;
-        height: 80px;
-
-        font-size: 1.8rem;
-
-    }
-
-
-    .ghana-story h3 {
-
-        max-width: 300px;
-
-        font-size: 1.65rem;
-
-    }
-
-
-    .ghana-story p {
-
-        font-size: 0.84rem;
-
-    }
-
-
-    .ghana-cities {
-
-        padding: 27px;
-
-    }
-
-
-    .ghana-cities-header {
+    .ghana-card-top {
 
         align-items: flex-start;
 
         flex-direction: column;
 
-        gap: 8px;
+        gap: 10px;
 
     }
 
 
-    .city-grid {
+    .ghana-badge {
 
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
-
-    }
-
-
-    .city-grid span {
-
-        min-height: 48px;
-
-        font-size: 0.7rem;
+        font-size: 0.65rem;
 
     }
 
 
-    .ghana-stat {
+    .ghana-online {
 
-        gap: 8px;
-
-    }
-
-
-    .ghana-stat-line {
-
-        width: 25px;
+        font-size: 0.65rem;
 
     }
 
 
-    .ghana-cta {
+    .ghana-symbol {
 
-        flex-direction: column;
+        width: 68px;
+        height: 68px;
 
-        width: 100%;
+        margin-top: 45px;
+        margin-bottom: 22px;
+
+        font-size: 1.7rem;
 
     }
 
 
-    .ghana-cta a {
+    .ghana-card h3 {
 
-        width: 100%;
+        font-size: 1.75rem;
+
+        line-height: 1.1;
+
+    }
+
+
+    .ghana-card p {
+
+        font-size: 0.84rem;
+
+        line-height: 1.7;
+
+    }
+
+
+    .ghana-locations {
+
+        gap: 7px;
+
+        margin-top: 24px;
+
+    }
+
+
+    .ghana-locations span {
+
+        padding: 7px 11px;
+
+        font-size: 0.65rem;
+
+    }
+
+
+    /* Values */
+
+    .ghana-values {
+
+        border-radius: var(--radius-lg);
+
+    }
+
+
+    .ghana-value {
+
+        grid-template-columns: 35px minmax(0, 1fr);
+
+        gap: 12px;
+
+        padding: 25px 22px;
+
+    }
+
+
+    .ghana-value-number {
+
+        font-size: 0.65rem;
+
+    }
+
+
+    .ghana-value h3 {
+
+        margin-bottom: 7px;
+
+        font-size: 1.05rem;
+
+    }
+
+
+    .ghana-value p {
+
+        font-size: 0.8rem;
+
+        line-height: 1.65;
+
+    }
+
+
+    /* Closing statement */
+
+    .ghana-statement {
+
+        gap: 9px;
+
+        margin-top: 40px;
+
+    }
+
+
+    .ghana-statement p {
+
+        font-size: 0.72rem;
 
     }
 
@@ -4964,64 +5096,78 @@ img {
     }
 
 
-    .ghana-header h2 {
+    .ghana-container {
 
-        font-size: 2.3rem;
+        width: calc(100% - 28px);
 
     }
 
 
-    .ghana-story {
+    .ghana-heading h2 {
 
-        min-height: 370px;
+        font-size: 2.25rem;
+
+    }
+
+
+    .ghana-heading p {
+
+        font-size: 0.86rem;
+
+    }
+
+
+    .ghana-card {
 
         padding: 23px;
 
     }
 
 
-    .ghana-story h3 {
+    .ghana-card h3 {
 
-        font-size: 1.5rem;
-
-    }
-
-
-    .ghana-cities {
-
-        padding: 23px;
+        font-size: 1.55rem;
 
     }
 
 
-    .city-grid {
+    .ghana-card p {
 
-        gap: 8px;
-
-    }
-
-
-    .city-grid span {
-
-        min-height: 46px;
-
-        padding: 8px 5px;
-
-        font-size: 0.68rem;
+        font-size: 0.8rem;
 
     }
 
 
-    .ghana-stat {
+    .ghana-locations span {
 
-        margin-top: 35px;
+        padding: 6px 9px;
+
+        font-size: 0.62rem;
 
     }
 
 
-    .ghana-cta {
+    .ghana-value {
 
-        margin-top: 40px;
+        grid-template-columns: 30px minmax(0, 1fr);
+
+        gap: 9px;
+
+        padding: 22px 19px;
+
+    }
+
+
+    .ghana-value h3 {
+
+        font-size: 1rem;
+
+    }
+
+
+    .ghana-value p {
+
+        font-size: 0.76rem;
 
     }
 
