@@ -10228,176 +10228,366 @@ img {
 
 /* ========================================= */
 /* LINKUPGH — PROFILE BUILDER CSS            */
+/* PREMIUM DARK / GREEN DESIGN               */
+/* ========================================= */
+/* ========================================= */
 /* PROFILE HEADER                            */
 /* ========================================= */
-
 .profile-header {
-
     width: 100%;
-    background: #ffffff;
-    border-bottom: 1px solid #eeeeee;
     position: sticky;
     top: 0;
     z-index: 1000;
-
+    background:
+        rgba(8, 11, 9, 0.88);
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
 }
-
-
+/* ========================================= */
+/* HEADER CONTAINER                          */
+/* ========================================= */
 .profile-header-container {
-
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px 30px;
-
+    width: min(1200px, calc(100% - 48px));
+    min-height: 76px;
+    margin-inline: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+    gap: 30px;
 }
-
-
-/* Logo */
-
+/* ========================================= */
+/* LOGO                                     */
+/* ========================================= */
 .profile-header .logo {
-
-    font-size: 28px;
-    font-weight: 800;
-    text-decoration: none;
-    color: #111111;
-
-}
-
-
-.profile-header .logo span {
-
-    color: #e91e63;
-
-}
-
-
-/* Progress */
-
-.profile-progress {
-
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 12px;
-
+    color: #f5f7f6;
+    font-family:
+        var(--font-heading),
+        Inter,
+        sans-serif;
+    font-size: 1.35rem;
+    font-weight: 800;
+    letter-spacing: -0.045em;
+    text-decoration: none;
+    white-space: nowrap;
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
 }
-
-
-.progress-step {
-
-    width: 38px;
-    height: 38px;
-
-    border-radius: 50%;
-
+.profile-header .logo span {
+    color: #18c47c;
+}
+.profile-header .logo:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+/* ========================================= */
+/* PROGRESS                                  */
+/* ========================================= */
+.profile-progress {
     display: flex;
     align-items: center;
     justify-content: center;
-
-    font-size: 14px;
+    gap: 10px;
+}
+/* ========================================= */
+/* PROGRESS STEP                             */
+/* ========================================= */
+.progress-step {
+    position: relative;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #737a76;
+    background:
+        rgba(255, 255, 255, 0.035);
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
+    font-size: 0.68rem;
     font-weight: 700;
-
-    background: #eeeeee;
-    color: #777;
-
+    letter-spacing: 0.02em;
+    transition:
+        color 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
 }
-
-
 .progress-step.active {
-
-    background: #e91e63;
-    color: white;
-
+    color: #06130d;
+    background: #18c47c;
+    border-color: #18c47c;
+    box-shadow:
+        0 0 0 5px rgba(24, 196, 124, 0.08),
+        0 0 22px rgba(24, 196, 124, 0.18);
+    transform: translateY(-1px);
 }
-
-
+/* ========================================= */
+/* PROGRESS LINE                             */
+/* ========================================= */
 .progress-line {
-
-    width: 45px;
-    height: 2px;
-    background: #dddddd;
-
+    width: 42px;
+    height: 1px;
+    background:
+        rgba(255, 255, 255, 0.10);
 }
-
-
-/* Exit */
-
+/* ========================================= */
+/* EXIT                                      */
+/* ========================================= */
 .profile-exit {
-
-    text-decoration: none;
-    color: #555;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 38px;
+    padding: 0 15px;
+    color: #8d9590;
+    background:
+        rgba(255, 255, 255, 0.025);
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 999px;
+    font-size: 0.72rem;
     font-weight: 600;
-
+    text-decoration: none;
+    transition:
+        color 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
 }
-
-
+.profile-exit:hover {
+    color: #f5f7f6;
+    background:
+        rgba(255, 255, 255, 0.06);
+    border-color:
+        rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+}
 /* ========================================= */
 /* PROFILE MAIN                              */
 /* ========================================= */
-
-
 .profile-main {
-
-    padding: 70px 20px 40px;
-
+    position: relative;
+    padding:
+        105px 20px 75px;
+    overflow: hidden;
+    background: #080b09;
 }
-
-
+/* ========================================= */
+/* AMBIENT GREEN GLOW                        */
+/* ========================================= */
+.profile-main::before {
+    content: "";
+    position: absolute;
+    width: 650px;
+    height: 650px;
+    left: 50%;
+    top: 35%;
+    transform:
+        translate(-50%, -50%);
+    background:
+        radial-gradient(
+            circle,
+            rgba(24, 196, 124, 0.11) 0%,
+            rgba(24, 196, 124, 0.035) 38%,
+            transparent 70%
+        );
+    pointer-events: none;
+}
+/* ========================================= */
+/* SECONDARY GOLD GLOW                      */
+/* ========================================= */
+.profile-main::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    right: -150px;
+    top: 10%;
+    background:
+        radial-gradient(
+            circle,
+            rgba(214, 181, 109, 0.06),
+            transparent 70%
+        );
+    pointer-events: none;
+}
+/* ========================================= */
+/* PROFILE WELCOME                           */
+/* ========================================= */
 .profile-welcome {
-
-    max-width: 850px;
-    margin: auto;
+    position: relative;
+    z-index: 2;
+    width: min(850px, 100%);
+    margin-inline: auto;
     text-align: center;
-
 }
-
-
+/* ========================================= */
+/* SECTION LABEL                             */
+/* ========================================= */
 .section-label {
-
-    display: inline-block;
-
-    color: #e91e63;
-    font-size: 13px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+    color: #38d99a;
+    font-size: 0.67rem;
     font-weight: 700;
-
-    letter-spacing: 1px;
-
-    margin-bottom: 15px;
-
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
 }
-
-
+.section-label::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    flex-shrink: 0;
+    background: #18c47c;
+    border-radius: 50%;
+    box-shadow:
+        0 0 12px rgba(24, 196, 124, 0.75);
+}
+/* ========================================= */
+/* WELCOME HEADING                          */
+/* ========================================= */
 .profile-welcome h1 {
-
-    font-size: 52px;
-    line-height: 1.1;
-
-    color: #111;
-
+    max-width: 780px;
+    margin: 0 auto;
+    color: #f4f7f5;
+    font-family:
+        var(--font-heading),
+        Inter,
+        sans-serif;
+    font-size:
+        clamp(3rem, 7vw, 5.6rem);
+    font-weight: 800;
+    line-height: 0.98;
+    letter-spacing: -0.065em;
 }
-
-
 .profile-welcome h1 span {
-
-    color: #e91e63;
-
+    color: #18c47c;
 }
-
-
+/* ========================================= */
+/* WELCOME DESCRIPTION                       */
+/* ========================================= */
 .profile-welcome p {
-
-    max-width: 600px;
-
-    margin: 20px auto;
-
-    color: #666;
-
-    font-size: 18px;
-    line-height: 1.6;
-
+    width: min(600px, 100%);
+    margin:
+        25px auto 0;
+    color: #89918c;
+    font-size: 0.95rem;
+    line-height: 1.85;
+}
+/* ========================================= */
+/* TABLET                                    */
+/* ========================================= */
+@media (max-width: 850px) {
+    .profile-header-container {
+        width:
+            min(100% - 36px, 760px);
+        min-height: 70px;
+    }
+    .profile-main {
+        padding:
+            85px 20px 60px;
+    }
+    .profile-welcome h1 {
+        font-size:
+            clamp(2.8rem, 8vw, 4.5rem);
+    }
+}
+/* ========================================= */
+/* MOBILE                                    */
+/* ========================================= */
+@media (max-width: 650px) {
+    .profile-header-container {
+        width:
+            calc(100% - 28px);
+        min-height: 66px;
+        gap: 15px;
+    }
+    .profile-header .logo {
+        font-size: 1.12rem;
+    }
+    .profile-progress {
+        gap: 6px;
+    }
+    .progress-step {
+        width: 30px;
+        height: 30px;
+        font-size: 0.58rem;
+    }
+    .progress-line {
+        width: 18px;
+    }
+    .profile-exit {
+        min-height: 32px;
+        padding:
+            0 11px;
+        font-size: 0.64rem;
+    }
+    .profile-main {
+        padding:
+            75px 18px 55px;
+    }
+    .section-label {
+        margin-bottom: 17px;
+        font-size: 0.61rem;
+    }
+    .profile-welcome h1 {
+        font-size:
+            clamp(2.65rem, 13vw, 4rem);
+        line-height: 0.99;
+    }
+    .profile-welcome p {
+        margin-top: 21px;
+        font-size: 0.87rem;
+        line-height: 1.75;
+    }
+}
+/* ========================================= */
+/* SMALL PHONES                              */
+/* ========================================= */
+@media (max-width: 400px) {
+    .profile-header-container {
+        width:
+            calc(100% - 20px);
+        min-height: 62px;
+    }
+    .profile-header .logo {
+        font-size: 1rem;
+    }
+    .profile-progress {
+        gap: 4px;
+    }
+    .progress-step {
+        width: 27px;
+        height: 27px;
+        font-size: 0.53rem;
+    }
+    .progress-line {
+        width: 12px;
+    }
+    .profile-exit {
+        padding:
+            0 9px;
+        font-size: 0.6rem;
+    }
+    .profile-main {
+        padding:
+            65px 15px 50px;
+    }
+    .profile-welcome h1 {
+        font-size: 2.55rem;
+    }
+    .profile-welcome p {
+        font-size: 0.84rem;
+    }
 }
 
 /* ========================================= */
