@@ -18218,3 +18218,358 @@ body {
         transform: none;
     }
 }
+/* =========================================================
+   LINKUPGH — SECTION 07
+   PHOTO REVEAL SETTINGS
+   RESPONSIVE FIX
+   ========================================================= */
+
+.photo-reveal-settings {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.photo-reveal-settings *,
+.photo-reveal-settings *::before,
+.photo-reveal-settings *::after {
+    box-sizing: border-box;
+}
+
+/* Section header */
+.photo-reveal-settings .profile-section-header {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.photo-reveal-settings .profile-step {
+    margin-bottom: 14px;
+}
+
+.photo-reveal-settings .profile-section-header h2 {
+    max-width: 700px;
+    margin: 0 auto 12px;
+    line-height: 1.15;
+    overflow-wrap: break-word;
+}
+
+.photo-reveal-settings .profile-section-header p {
+    max-width: 620px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* Preview */
+.photo-reveal-settings .reveal-preview {
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto 32px;
+    padding: 32px;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.photo-reveal-settings .reveal-avatar {
+    width: 82px;
+    height: 82px;
+    min-width: 82px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.photo-reveal-settings .reveal-preview-content {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    overflow-wrap: break-word;
+}
+
+.photo-reveal-settings .reveal-label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Reveal options */
+.photo-reveal-settings .reveal-options {
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.photo-reveal-settings .reveal-option {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.photo-reveal-settings .reveal-option-icon {
+    flex: 0 0 48px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+}
+
+.photo-reveal-settings .reveal-option-content {
+    flex: 1 1 auto;
+    min-width: 0;
+    width: auto;
+    overflow-wrap: break-word;
+}
+
+.photo-reveal-settings .reveal-option-content strong {
+    display: block;
+    margin-bottom: 5px;
+    line-height: 1.35;
+}
+
+.photo-reveal-settings .reveal-option-content small {
+    display: block;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+}
+
+.photo-reveal-settings .reveal-option-check {
+    flex: 0 0 auto;
+    width: 24px;
+    height: 24px;
+}
+
+/* Privacy notice */
+.photo-reveal-settings .profile-notice {
+    width: 100%;
+    max-width: 680px;
+    margin: 28px auto;
+    overflow: hidden;
+}
+
+.photo-reveal-settings .form-primary-btn.reveal-continue {
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .photo-reveal-settings {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding-left: 0;
+        padding-right: 0;
+        overflow: hidden;
+    }
+
+    .photo-reveal-settings .profile-section-header {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 28px;
+        padding: 0 4px;
+    }
+
+    .photo-reveal-settings .profile-section-header h2 {
+        font-size: 28px;
+        line-height: 1.18;
+    }
+
+    .photo-reveal-settings .profile-section-header p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .photo-reveal-settings .reveal-preview {
+        width: 100%;
+        max-width: 100%;
+        padding: 24px 18px;
+        border-radius: 20px;
+        margin-bottom: 24px;
+    }
+
+    .photo-reveal-settings .reveal-avatar {
+        width: 70px;
+        height: 70px;
+        min-width: 70px;
+        margin-bottom: 16px;
+    }
+
+    .photo-reveal-settings .reveal-options {
+        width: 100%;
+        max-width: 100%;
+        gap: 12px;
+    }
+
+    .photo-reveal-settings .reveal-option {
+        width: 100%;
+        padding: 16px;
+        gap: 12px;
+        border-radius: 16px;
+    }
+
+    .photo-reveal-settings .reveal-option-icon {
+        flex: 0 0 42px;
+        width: 42px;
+        height: 42px;
+    }
+
+    .photo-reveal-settings .reveal-option-content strong {
+        font-size: 15px;
+    }
+
+    .photo-reveal-settings .reveal-option-content small {
+        font-size: 13px;
+    }
+
+    .photo-reveal-settings .reveal-option-check {
+        width: 20px;
+        height: 20px;
+    }
+
+    .photo-reveal-settings .profile-notice {
+        width: 100%;
+        max-width: 100%;
+        margin: 22px 0;
+    }
+
+    .photo-reveal-settings .form-primary-btn.reveal-continue {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* =========================================================
+   SMALL iPHONES
+   ========================================================= */
+
+@media (max-width: 390px) {
+
+    .photo-reveal-settings .profile-section-header h2 {
+        font-size: 25px;
+    }
+
+    .photo-reveal-settings .reveal-preview {
+        padding: 20px 14px;
+    }
+
+    .photo-reveal-settings .reveal-option {
+        padding: 14px;
+    }
+
+    .photo-reveal-settings .reveal-option-icon {
+        flex-basis: 38px;
+        width: 38px;
+        height: 38px;
+    }
+
+    .photo-reveal-settings .reveal-option-content strong {
+        font-size: 14px;
+    }
+
+    .photo-reveal-settings .reveal-option-content small {
+        font-size: 12px;
+    }
+}
+
+/* Prevent this section from ever creating horizontal scrolling */
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* =========================================================
+   GLOBAL MOBILE WIDTH / ZOOM FIX
+   ========================================================= */
+
+html {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Prevent sections from becoming wider than the screen */
+.profile-main,
+.profile-main > section,
+.profile-about,
+.profile-interests,
+.profile-personality,
+.profile-looking-for,
+.profile-preferences,
+.profile-avatar,
+.photo-reveal-settings,
+.profile-preview-section,
+.profile-complete {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+/* Prevent padding/borders from adding extra width */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Images/media can never push the page wider */
+img,
+video,
+iframe,
+svg {
+    max-width: 100%;
+}
+
+/* Long text cannot create horizontal overflow */
+h1,
+h2,
+h3,
+h4,
+p,
+span,
+strong,
+small,
+a,
+button {
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
+
+/* Form controls must stay inside viewport */
+input,
+textarea,
+select,
+button {
+    max-width: 100%;
+}
