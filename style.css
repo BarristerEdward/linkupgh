@@ -13378,3 +13378,2158 @@ body {
             none !important;
     }
 }
+
+
+/* =========================================================
+   LINKUPGH — COMPLETE PROFILE BUILDER
+   PREMIUM DARK / GREEN DESIGN
+   ========================================================= */
+
+/* =========================================================
+   1. FOUNDATION
+   ========================================================= */
+
+.profile-main,
+.profile-main * {
+    box-sizing: border-box;
+}
+
+:root {
+    --lu-bg: #080b09;
+    --lu-bg-soft: #0c110e;
+    --lu-card: rgba(16, 23, 19, 0.88);
+    --lu-card-soft: rgba(20, 29, 24, 0.72);
+
+    --lu-green: #18c47c;
+    --lu-green-light: #54e39e;
+    --lu-green-dark: #0e9b60;
+
+    --lu-text: #f5f7f5;
+    --lu-text-soft: #c4cbc6;
+    --lu-muted: #858e89;
+
+    --lu-border: rgba(255,255,255,0.09);
+    --lu-border-light: rgba(255,255,255,0.14);
+
+    --lu-radius: 24px;
+    --lu-radius-small: 14px;
+
+    --lu-shadow:
+        0 25px 70px rgba(0,0,0,0.35);
+
+    --lu-green-glow:
+        0 0 35px rgba(24,196,124,0.12);
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    overflow-x: hidden;
+    background: var(--lu-bg);
+}
+
+
+/* =========================================================
+   2. PROFILE HEADER
+   ========================================================= */
+
+.profile-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+
+    background: rgba(7,10,8,0.92);
+    border-bottom: 1px solid var(--lu-border);
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    box-shadow: 0 10px 35px rgba(0,0,0,0.2);
+}
+
+.profile-header-container {
+    width: min(1180px, calc(100% - 40px));
+    min-height: 74px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.profile-header .logo {
+    color: var(--lu-text);
+    text-decoration: none;
+
+    font-size: 1.35rem;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+
+    white-space: nowrap;
+}
+
+.profile-header .logo span {
+    color: var(--lu-green);
+}
+
+.profile-progress {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    flex: 1;
+    max-width: 520px;
+}
+
+.progress-step {
+    width: 32px;
+    height: 32px;
+
+    flex: 0 0 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--lu-border-light);
+    border-radius: 50%;
+
+    color: var(--lu-muted);
+    background: rgba(255,255,255,0.025);
+
+    font-size: 0.7rem;
+    font-weight: 700;
+
+    transition: all 0.25s ease;
+}
+
+.progress-step.active {
+    color: #06120c;
+    background: var(--lu-green);
+    border-color: var(--lu-green);
+
+    box-shadow:
+        0 0 0 5px rgba(24,196,124,0.08),
+        0 0 25px rgba(24,196,124,0.2);
+}
+
+.progress-line {
+    height: 1px;
+    flex: 1;
+    max-width: 55px;
+
+    background: var(--lu-border);
+}
+
+.profile-exit {
+    color: var(--lu-muted);
+    text-decoration: none;
+
+    font-size: 0.85rem;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition: color 0.2s ease;
+}
+
+.profile-exit:hover {
+    color: var(--lu-text);
+}
+
+
+/* =========================================================
+   3. MAIN PROFILE AREA
+   ========================================================= */
+
+.profile-main {
+    position: relative;
+
+    width: 100%;
+    max-width: 100%;
+
+    min-height: calc(100vh - 74px);
+
+    padding:
+        clamp(65px, 8vw, 110px)
+        20px
+        100px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 15% 5%,
+            rgba(24,196,124,0.09),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 85% 25%,
+            rgba(198,150,55,0.045),
+            transparent 28%
+        ),
+        var(--lu-bg);
+}
+
+.profile-main::before {
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    top: 5%;
+    left: -250px;
+
+    background: rgba(24,196,124,0.06);
+
+    filter: blur(100px);
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.profile-main::after {
+    content: "";
+
+    position: absolute;
+
+    width: 400px;
+    height: 400px;
+
+    right: -220px;
+    bottom: 10%;
+
+    background: rgba(24,196,124,0.045);
+
+    filter: blur(100px);
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   4. WELCOME
+   ========================================================= */
+
+.profile-welcome {
+    position: relative;
+    z-index: 1;
+
+    width: min(850px, 100%);
+
+    margin: 0 auto clamp(55px, 7vw, 85px);
+
+    text-align: center;
+}
+
+.profile-welcome .section-label,
+.profile-section-header .profile-step {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 18px;
+
+    color: var(--lu-green);
+
+    font-size: 0.72rem;
+    font-weight: 800;
+
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.profile-welcome .section-label::before {
+    content: "";
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: var(--lu-green);
+
+    box-shadow: 0 0 12px rgba(24,196,124,0.6);
+}
+
+.profile-welcome h1 {
+    margin: 0 0 18px;
+
+    color: var(--lu-text);
+
+    font-size: clamp(2.3rem, 6vw, 4.5rem);
+    line-height: 1.03;
+    letter-spacing: -0.055em;
+}
+
+.profile-welcome h1 span {
+    color: var(--lu-green);
+}
+
+.profile-welcome p {
+    width: min(650px, 100%);
+    margin: 0 auto;
+
+    color: var(--lu-text-soft);
+
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   5. ALL PROFILE SECTIONS
+   ========================================================= */
+
+.profile-about,
+.profile-interests,
+.profile-personality,
+.profile-looking-for,
+.profile-preferences,
+.profile-avatar,
+.photo-reveal-settings,
+.profile-preview-section,
+.profile-complete {
+    position: relative;
+    z-index: 1;
+
+    width: min(850px, 100%);
+
+    margin: 0 auto 65px;
+}
+
+.profile-section-header {
+    margin-bottom: 30px;
+}
+
+.profile-section-header h2 {
+    margin: 0 0 12px;
+
+    color: var(--lu-text);
+
+    font-size: clamp(1.7rem, 4vw, 2.5rem);
+    line-height: 1.15;
+    letter-spacing: -0.035em;
+}
+
+.profile-section-header h2 span {
+    color: var(--lu-green);
+}
+
+.profile-section-header > p {
+    max-width: 680px;
+
+    margin: 0;
+
+    color: var(--lu-muted);
+
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   6. FORM CARDS
+   ========================================================= */
+
+.form-section,
+.profile-card,
+.profile-section,
+.profile-step-card,
+.profile-form-card,
+.form-step {
+    width: 100%;
+}
+
+.form-section,
+.profile-card,
+.profile-section,
+.profile-step-card,
+.profile-form-card {
+    padding: clamp(22px, 4vw, 34px);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(20,29,24,0.92),
+            rgba(11,16,13,0.92)
+        );
+
+    border: 1px solid var(--lu-border);
+
+    border-radius: var(--lu-radius);
+
+    box-shadow: var(--lu-shadow);
+}
+
+
+/* =========================================================
+   7. FORM HEADERS
+   ========================================================= */
+
+.form-section-header,
+.profile-section-header {
+    position: relative;
+}
+
+.form-step {
+    display: inline-flex;
+
+    margin-bottom: 18px;
+
+    padding: 7px 11px;
+
+    border: 1px solid rgba(24,196,124,0.18);
+    border-radius: 999px;
+
+    background: rgba(24,196,124,0.06);
+
+    color: var(--lu-green);
+
+    font-size: 0.68rem;
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+}
+
+
+/* =========================================================
+   8. FORM GROUPS
+   ========================================================= */
+
+.form-group,
+.profile-field,
+.interest-group,
+.personality-group,
+.looking-for-group {
+    margin-bottom: 28px;
+}
+
+.form-group:last-child,
+.profile-field:last-child,
+.interest-group:last-child {
+    margin-bottom: 0;
+}
+
+.profile-main label,
+.profile-main .interest-heading,
+.profile-main .profile-field h3,
+.profile-main .personality-group h3,
+.profile-main .looking-for-group h3 {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: var(--lu-text);
+
+    font-size: 0.88rem;
+    font-weight: 700;
+}
+
+.profile-main .field-description,
+.profile-main .interest-description {
+    margin: -2px 0 15px;
+
+    color: var(--lu-muted);
+
+    font-size: 0.8rem;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   9. INPUTS
+   ========================================================= */
+
+.profile-main input,
+.profile-main select,
+.profile-main textarea {
+    width: 100%;
+
+    border: 1px solid var(--lu-border-light);
+
+    border-radius: var(--lu-radius-small);
+
+    background:
+        rgba(6,10,8,0.75);
+
+    color: var(--lu-text);
+
+    font-family: inherit;
+    font-size: 16px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.profile-main input,
+.profile-main select {
+    min-height: 56px;
+    padding: 0 16px;
+}
+
+.profile-main textarea {
+    min-height: 145px;
+    padding: 15px 16px;
+
+    resize: vertical;
+    line-height: 1.6;
+}
+
+.profile-main input::placeholder,
+.profile-main textarea::placeholder {
+    color: #66706a;
+}
+
+.profile-main input:hover,
+.profile-main select:hover,
+.profile-main textarea:hover {
+    border-color: rgba(255,255,255,0.18);
+}
+
+.profile-main input:focus,
+.profile-main select:focus,
+.profile-main textarea:focus {
+    border-color: var(--lu-green);
+
+    background: rgba(12,20,15,0.9);
+
+    box-shadow:
+        0 0 0 4px rgba(24,196,124,0.08),
+        0 0 25px rgba(24,196,124,0.06);
+}
+
+
+/* =========================================================
+   10. FORM GRID
+   ========================================================= */
+
+.form-row,
+.form-grid,
+.profile-form-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+
+/* =========================================================
+   11. INTERESTS + HOBBIES
+   ========================================================= */
+
+.interest-options {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 12px;
+}
+
+.interest-option {
+    position: relative;
+
+    min-height: 74px;
+
+    padding: 14px 12px;
+
+    border: 1px solid var(--lu-border);
+
+    border-radius: 17px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(20,28,23,0.9),
+            rgba(10,15,12,0.9)
+        );
+
+    color: var(--lu-text-soft);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    font-family: inherit;
+    font-size: 0.82rem;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.interest-option span {
+    font-size: 1.45rem;
+    line-height: 1;
+}
+
+.interest-option:hover {
+    transform: translateY(-2px);
+
+    border-color: rgba(24,196,124,0.45);
+
+    color: var(--lu-text);
+
+    box-shadow:
+        0 12px 28px rgba(0,0,0,0.2),
+        0 0 20px rgba(24,196,124,0.05);
+}
+
+.interest-option.active,
+.interest-option.selected {
+    border-color: var(--lu-green);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(24,196,124,0.16),
+            rgba(12,45,30,0.8)
+        );
+
+    color: var(--lu-green-light);
+
+    box-shadow:
+        0 0 0 1px rgba(24,196,124,0.1),
+        0 12px 30px rgba(0,0,0,0.25),
+        0 0 25px rgba(24,196,124,0.08);
+}
+
+.interest-option.active::after,
+.interest-option.selected::after {
+    content: "✓";
+
+    position: absolute;
+
+    top: 8px;
+    right: 9px;
+
+    width: 20px;
+    height: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--lu-green);
+
+    color: #06120c;
+
+    font-size: 0.68rem;
+    font-weight: 900;
+}
+
+
+/* =========================================================
+   12. PERSONALITY
+   ========================================================= */
+
+.personality-options {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+}
+
+.personality-option {
+    width: 100%;
+
+    min-height: 82px;
+
+    padding: 16px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    border: 1px solid var(--lu-border);
+
+    border-radius: 17px;
+
+    background: rgba(12,18,15,0.85);
+
+    color: var(--lu-text-soft);
+
+    font-family: inherit;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    transition: all 0.2s ease;
+}
+
+.personality-option:hover {
+    border-color: rgba(24,196,124,0.4);
+
+    transform: translateY(-2px);
+}
+
+.personality-option.active,
+.personality-option.selected {
+    border-color: var(--lu-green);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(24,196,124,0.14),
+            rgba(10,25,17,0.95)
+        );
+
+    color: var(--lu-text);
+
+    box-shadow: var(--lu-green-glow);
+}
+
+.personality-icon {
+    width: 45px;
+    height: 45px;
+
+    flex: 0 0 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background: rgba(24,196,124,0.07);
+
+    font-size: 1.35rem;
+}
+
+.personality-content {
+    min-width: 0;
+}
+
+.personality-content strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: var(--lu-text);
+
+    font-size: 0.88rem;
+}
+
+.personality-content small {
+    display: block;
+
+    color: var(--lu-muted);
+
+    font-size: 0.75rem;
+    line-height: 1.45;
+}
+
+
+/* =========================================================
+   13. PERSONALITY TAGS
+   ========================================================= */
+
+.personality-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    margin-top: 15px;
+}
+
+.personality-tag {
+    padding: 8px 11px;
+
+    border: 1px solid var(--lu-border);
+
+    border-radius: 999px;
+
+    background: rgba(255,255,255,0.025);
+
+    color: var(--lu-text-soft);
+
+    font-size: 0.75rem;
+}
+
+
+/* =========================================================
+   14. LOOKING FOR
+   ========================================================= */
+
+.looking-for-options {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+}
+
+.looking-for-option {
+    width: 100%;
+
+    min-height: 82px;
+
+    padding: 16px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    border: 1px solid var(--lu-border);
+
+    border-radius: 17px;
+
+    background: rgba(12,18,15,0.85);
+
+    color: var(--lu-text-soft);
+
+    font-family: inherit;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    transition: all 0.2s ease;
+}
+
+.looking-for-option:hover {
+    border-color: rgba(24,196,124,0.4);
+    transform: translateY(-2px);
+}
+
+.looking-for-option.active,
+.looking-for-option.selected {
+    border-color: var(--lu-green);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(24,196,124,0.14),
+            rgba(10,25,17,0.95)
+        );
+
+    color: var(--lu-text);
+
+    box-shadow: var(--lu-green-glow);
+}
+
+.looking-for-icon {
+    width: 44px;
+    height: 44px;
+
+    flex: 0 0 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background: rgba(24,196,124,0.07);
+
+    font-size: 1.25rem;
+}
+
+.looking-for-content strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: var(--lu-text);
+
+    font-size: 0.85rem;
+}
+
+.looking-for-content small {
+    color: var(--lu-muted);
+
+    font-size: 0.73rem;
+    line-height: 1.45;
+}
+
+
+/* =========================================================
+   15. PREFERENCES
+   ========================================================= */
+
+.preference-options {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 10px;
+}
+
+.preference-options.preference-multiple {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.preference-option {
+    position: relative;
+
+    min-height: 58px;
+
+    padding: 12px 14px;
+
+    border: 1px solid var(--lu-border);
+
+    border-radius: 14px;
+
+    background: rgba(10,16,13,0.85);
+
+    color: var(--lu-text-soft);
+
+    font-family: inherit;
+
+    font-size: 0.8rem;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.preference-option:hover {
+    border-color: rgba(24,196,124,0.4);
+}
+
+.preference-option.active,
+.preference-option.selected {
+    border-color: var(--lu-green);
+
+    background: rgba(24,196,124,0.11);
+
+    color: var(--lu-green-light);
+
+    box-shadow: var(--lu-green-glow);
+}
+
+.age-range {
+    display: grid;
+
+    grid-template-columns: 1fr auto 1fr;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.age-range-divider {
+    color: var(--lu-muted);
+
+    font-size: 0.8rem;
+}
+
+.age-field {
+    min-width: 0;
+}
+
+
+/* =========================================================
+   16. NOTICE
+   ========================================================= */
+
+.profile-notice {
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 18px;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 13px;
+
+    border: 1px solid rgba(24,196,124,0.12);
+
+    border-radius: 17px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(24,196,124,0.055),
+            rgba(255,255,255,0.015)
+        );
+}
+
+.profile-notice > span {
+    flex: 0 0 auto;
+
+    font-size: 1.15rem;
+}
+
+.profile-notice strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: var(--lu-text);
+
+    font-size: 0.82rem;
+}
+
+.profile-notice p {
+    margin: 0;
+
+    color: var(--lu-muted);
+
+    font-size: 0.74rem;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   17. AVATAR
+   ========================================================= */
+
+.avatar-preview {
+    padding: 30px;
+
+    margin-bottom: 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border: 1px solid var(--lu-border);
+
+    border-radius: var(--lu-radius);
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(24,196,124,0.07),
+            transparent 60%
+        ),
+        rgba(10,15,12,0.8);
+}
+
+.avatar-circle {
+    width: 130px;
+    height: 130px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(24,196,124,0.3);
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(24,196,124,0.1),
+            rgba(255,255,255,0.025)
+        );
+
+    box-shadow:
+        0 0 0 8px rgba(24,196,124,0.025),
+        0 20px 50px rgba(0,0,0,0.35);
+}
+
+.avatar-circle span {
+    font-size: 4rem;
+}
+
+.avatar-preview-label {
+    margin-top: 14px;
+
+    color: var(--lu-muted);
+
+    font-size: 0.65rem;
+    font-weight: 800;
+
+    letter-spacing: 0.15em;
+}
+
+.avatar-selection {
+    padding: 25px;
+
+    border: 1px solid var(--lu-border);
+
+    border-radius: var(--lu-radius);
+
+    background: rgba(12,18,15,0.85);
+}
+
+.avatar-selection-header {
+    margin-bottom: 20px;
+}
+
+.avatar-selection-header h3 {
+    margin: 0 0 5px;
+
+    color: var(--lu-text);
+
+    font-size: 1rem;
+}
+
+.avatar-selection-header p {
+    margin: 0;
+
+    color: var(--lu-muted);
+
+    font-size: 0.75rem;
+}
+
+.avatar-options {
+    display: grid;
+
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+
+    gap: 10px;
+}
+
+.avatar-option {
+    width: 100%;
+    aspect-ratio: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--lu-border);
+
+    border-radius: 16px;
+
+    background: rgba(5,10,7,0.7);
+
+    font-size: 1.65rem;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.avatar-option:hover {
+    transform: translateY(-3px);
+
+    border-color: rgba(24,196,124,0.4);
+
+    background: rgba(24,196,124,0.06);
+}
+
+.avatar-option.active,
+.avatar-option.selected {
+    border-color: var(--lu-green);
+
+    background: rgba(24,196,124,0.12);
+
+    box-shadow:
+        0 0 0 2px rgba(24,196,124,0.08),
+        0 10px 25px rgba(0,0,0,0.25);
+}
+
+
+/* =========================================================
+   18. PHOTO REVEAL
+   ========================================================= */
+
+.reveal-preview {
+    padding: 25px;
+
+    margin-bottom: 28px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    border: 1px solid var(--lu-border);
+
+    border-radius: var(--lu-radius);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(24,196,124,0.055),
+            rgba(10,15,12,0.9)
+        );
+}
+
+.reveal-avatar {
+    width: 70px;
+    height: 70px;
+
+    flex: 0 0 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+
+    background: rgba(24,196,124,0.08);
+
+    border: 1px solid rgba(24,196,124,0.14);
+
+    font-size: 1.6rem;
+}
+
+.reveal-preview-content {
+    min-width: 0;
+}
+
+.reveal-label {
+    display: inline-block;
+
+    margin-bottom: 6px;
+
+    color: var(--lu-green);
+
+    font-size: 0.62rem;
+    font-weight: 800;
+
+    letter-spacing: 0.13em;
+}
+
+.reveal-preview-content h3 {
+    margin: 0 0 5px;
+
+    color: var(--lu-text);
+
+    font-size: 1rem;
+}
+
+.reveal-preview-content p {
+    margin: 0;
+
+    color: var(--lu-muted);
+
+    font-size: 0.76rem;
+    line-height: 1.55;
+}
+
+.reveal-options {
+    display: grid;
+
+    gap: 12px;
+}
+
+.reveal-option {
+    position: relative;
+
+    width: 100%;
+
+    padding: 18px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    border: 1px solid var(--lu-border);
+
+    border-radius: 18px;
+
+    background: rgba(10,16,13,0.8);
+
+    color: var(--lu-text-soft);
+
+    font-family: inherit;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.reveal-option:hover {
+    border-color: rgba(24,196,124,0.35);
+
+    transform: translateY(-1px);
+}
+
+.reveal-option.active,
+.reveal-option.selected {
+    border-color: var(--lu-green);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(24,196,124,0.12),
+            rgba(10,25,17,0.92)
+        );
+
+    box-shadow: var(--lu-green-glow);
+}
+
+.reveal-option-icon {
+    width: 45px;
+    height: 45px;
+
+    flex: 0 0 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background: rgba(24,196,124,0.07);
+
+    font-size: 1.2rem;
+}
+
+.reveal-option-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.reveal-option-content strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: var(--lu-text);
+
+    font-size: 0.85rem;
+}
+
+.reveal-option-content small {
+    display: block;
+
+    color: var(--lu-muted);
+
+    font-size: 0.73rem;
+    line-height: 1.5;
+}
+
+.reveal-option-check {
+    width: 23px;
+    height: 23px;
+
+    flex: 0 0 23px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--lu-border-light);
+
+    border-radius: 50%;
+
+    color: transparent;
+
+    font-size: 0.7rem;
+    font-weight: 900;
+}
+
+.reveal-option.active .reveal-option-check,
+.reveal-option.selected .reveal-option-check {
+    border-color: var(--lu-green);
+
+    background: var(--lu-green);
+
+    color: #06120c;
+}
+
+
+/* =========================================================
+   19. PROFILE PREVIEW
+   ========================================================= */
+
+.profile-preview-card {
+    overflow: hidden;
+
+    border: 1px solid var(--lu-border);
+
+    border-radius: 26px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(20,28,23,0.95),
+            rgba(9,14,11,0.95)
+        );
+
+    box-shadow: var(--lu-shadow);
+}
+
+.preview-profile-top {
+    padding: 28px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 17px;
+
+    border-bottom: 1px solid var(--lu-border);
+}
+
+.preview-avatar {
+    width: 78px;
+    height: 78px;
+
+    flex: 0 0 78px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(24,196,124,0.08);
+
+    border: 1px solid rgba(24,196,124,0.2);
+}
+
+.preview-avatar span {
+    font-size: 2.3rem;
+}
+
+.preview-identity h3 {
+    margin: 0 0 6px;
+
+    color: var(--lu-text);
+
+    font-size: 1.25rem;
+}
+
+.preview-identity span {
+    color: var(--lu-muted);
+
+    font-size: 0.75rem;
+}
+
+.preview-section {
+    padding: 23px 28px;
+
+    border-bottom: 1px solid var(--lu-border);
+}
+
+.preview-label {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: var(--lu-green);
+
+    font-size: 0.62rem;
+    font-weight: 800;
+
+    letter-spacing: 0.13em;
+}
+
+.preview-section p {
+    margin: 0;
+
+    color: var(--lu-text-soft);
+
+    font-size: 0.84rem;
+    line-height: 1.7;
+}
+
+.preview-tag-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+.preview-tag {
+    padding: 7px 10px;
+
+    border: 1px solid var(--lu-border);
+
+    border-radius: 999px;
+
+    background: rgba(255,255,255,0.025);
+
+    color: var(--lu-text-soft);
+
+    font-size: 0.7rem;
+}
+
+.preview-photo-private {
+    margin: 22px 28px;
+
+    padding: 16px;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 12px;
+
+    border: 1px solid rgba(24,196,124,0.12);
+
+    border-radius: 16px;
+
+    background: rgba(24,196,124,0.045);
+}
+
+.preview-photo-icon {
+    font-size: 1.1rem;
+}
+
+.preview-photo-private strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: var(--lu-text);
+
+    font-size: 0.8rem;
+}
+
+.preview-photo-private p {
+    margin: 0;
+
+    color: var(--lu-muted);
+
+    font-size: 0.7rem;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   20. PREVIEW ACTIONS
+   ========================================================= */
+
+.preview-actions {
+    padding: 0 28px 28px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+}
+
+.preview-action {
+    min-height: 54px;
+
+    border-radius: 14px;
+
+    font-family: inherit;
+
+    font-size: 0.82rem;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.preview-action.primary {
+    border: 1px solid var(--lu-green);
+
+    background: var(--lu-green);
+
+    color: #06120c;
+}
+
+.preview-action.primary:hover {
+    background: var(--lu-green-light);
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 12px 30px rgba(24,196,124,0.15);
+}
+
+.preview-action.secondary {
+    border: 1px solid var(--lu-border-light);
+
+    background: rgba(255,255,255,0.025);
+
+    color: var(--lu-text-soft);
+}
+
+.preview-action.secondary:hover {
+    border-color: rgba(255,255,255,0.2);
+
+    color: var(--lu-text);
+}
+
+
+/* =========================================================
+   21. COMPLETION
+   ========================================================= */
+
+.profile-complete-container {
+    width: 100%;
+}
+
+.complete-icon {
+    width: 85px;
+    height: 85px;
+
+    margin: 0 auto 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(24,196,124,0.3);
+
+    border-radius: 50%;
+
+    background: rgba(24,196,124,0.08);
+
+    box-shadow:
+        0 0 0 10px rgba(24,196,124,0.025),
+        0 0 40px rgba(24,196,124,0.1);
+}
+
+.complete-check {
+    color: var(--lu-green);
+
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+
+.complete-label {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: var(--lu-green);
+
+    font-size: 0.7rem;
+    font-weight: 800;
+
+    letter-spacing: 0.15em;
+
+    text-align: center;
+}
+
+.completion-card {
+    padding: 30px;
+
+    border: 1px solid var(--lu-border);
+
+    border-radius: var(--lu-radius);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(20,29,24,0.9),
+            rgba(9,14,11,0.95)
+        );
+
+    box-shadow: var(--lu-shadow);
+}
+
+.completion-header {
+    margin-bottom: 22px;
+}
+
+.completion-header h2 {
+    margin: 0 0 8px;
+
+    color: var(--lu-text);
+
+    font-size: 1.35rem;
+}
+
+.completion-header p {
+    margin: 0;
+
+    color: var(--lu-muted);
+
+    font-size: 0.8rem;
+    line-height: 1.6;
+}
+
+.completion-bar {
+    width: 100%;
+    height: 8px;
+
+    overflow: hidden;
+
+    border-radius: 999px;
+
+    background: rgba(255,255,255,0.06);
+}
+
+.completion-fill {
+    width: 100%;
+    height: 100%;
+
+    border-radius: inherit;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--lu-green-dark),
+            var(--lu-green-light)
+        );
+
+    box-shadow: 0 0 15px rgba(24,196,124,0.25);
+}
+
+
+/* =========================================================
+   22. ALL PRIMARY BUTTONS
+   ========================================================= */
+
+.form-primary-btn,
+.continue-button,
+.next-button,
+.primary-button,
+.avatar-continue,
+.interests-continue,
+.preferences-continue,
+.reveal-continue {
+    width: 100%;
+
+    min-height: 58px;
+
+    margin-top: 28px;
+
+    padding: 0 22px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    border: 1px solid var(--lu-green);
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--lu-green),
+            var(--lu-green-dark)
+        );
+
+    color: #041109;
+
+    font-family: inherit;
+
+    font-size: 0.86rem;
+    font-weight: 850;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 30px rgba(24,196,124,0.08);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        filter 0.2s ease;
+}
+
+.form-primary-btn span,
+.continue-button span,
+.next-button span,
+.primary-button span {
+    font-size: 1.05rem;
+
+    transition: transform 0.2s ease;
+}
+
+.form-primary-btn:hover,
+.continue-button:hover,
+.next-button:hover,
+.primary-button:hover {
+    transform: translateY(-2px);
+
+    filter: brightness(1.06);
+
+    box-shadow:
+        0 16px 35px rgba(24,196,124,0.16);
+}
+
+.form-primary-btn:hover span,
+.continue-button:hover span,
+.next-button:hover span,
+.primary-button:hover span {
+    transform: translateX(3px);
+}
+
+.form-primary-btn:active,
+.continue-button:active,
+.next-button:active,
+.primary-button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   23. SECONDARY BUTTONS
+   ========================================================= */
+
+.secondary-button,
+.edit-button {
+    min-height: 52px;
+
+    padding: 0 20px;
+
+    border: 1px solid var(--lu-border-light);
+
+    border-radius: 14px;
+
+    background: rgba(255,255,255,0.025);
+
+    color: var(--lu-text-soft);
+
+    font-family: inherit;
+
+    font-size: 0.8rem;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.secondary-button:hover,
+.edit-button:hover {
+    border-color: rgba(24,196,124,0.35);
+
+    color: var(--lu-green-light);
+
+    background: rgba(24,196,124,0.05);
+}
+
+
+/* =========================================================
+   24. DISABLED STATES
+   ========================================================= */
+
+button:disabled,
+.form-primary-btn:disabled,
+.continue-button:disabled,
+.next-button:disabled {
+    opacity: 0.45;
+
+    cursor: not-allowed;
+
+    transform: none !important;
+
+    box-shadow: none !important;
+}
+
+
+/* =========================================================
+   25. ACCESSIBILITY
+   ========================================================= */
+
+.profile-main button:focus-visible,
+.profile-main input:focus-visible,
+.profile-main textarea:focus-visible,
+.profile-main select:focus-visible,
+.profile-main a:focus-visible {
+    outline: 2px solid var(--lu-green);
+
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   26. MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .profile-header-container {
+        width: calc(100% - 24px);
+
+        min-height: 66px;
+
+        gap: 10px;
+    }
+
+    .profile-header .logo {
+        font-size: 1.05rem;
+    }
+
+    .profile-progress {
+        gap: 5px;
+    }
+
+    .progress-step {
+        width: 27px;
+        height: 27px;
+
+        flex-basis: 27px;
+
+        font-size: 0.58rem;
+    }
+
+    .progress-line {
+        max-width: 22px;
+    }
+
+    .profile-exit {
+        font-size: 0.72rem;
+    }
+
+    .profile-main {
+        padding:
+            50px
+            14px
+            70px;
+    }
+
+    .profile-welcome {
+        margin-bottom: 50px;
+    }
+
+    .profile-welcome h1 {
+        font-size: clamp(2rem, 10vw, 3rem);
+    }
+
+    .profile-welcome p {
+        font-size: 0.86rem;
+    }
+
+    .profile-about,
+    .profile-interests,
+    .profile-personality,
+    .profile-looking-for,
+    .profile-preferences,
+    .profile-avatar,
+    .photo-reveal-settings,
+    .profile-preview-section,
+    .profile-complete {
+        margin-bottom: 50px;
+    }
+
+    .form-section,
+    .profile-card,
+    .profile-section,
+    .profile-step-card,
+    .profile-form-card {
+        padding: 20px 16px;
+
+        border-radius: 20px;
+    }
+
+    .profile-section-header h2 {
+        font-size: 1.65rem;
+    }
+
+    .interest-options {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 9px;
+    }
+
+    .interest-option {
+        min-height: 70px;
+
+        font-size: 0.76rem;
+    }
+
+    .personality-options,
+    .looking-for-options {
+        grid-template-columns: 1fr;
+    }
+
+    .preference-options {
+        grid-template-columns: 1fr;
+    }
+
+    .preference-options.preference-multiple {
+        grid-template-columns: 1fr;
+    }
+
+    .avatar-options {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .reveal-preview {
+        padding: 18px;
+
+        align-items: flex-start;
+    }
+
+    .reveal-avatar {
+        width: 55px;
+        height: 55px;
+
+        flex-basis: 55px;
+    }
+
+    .preview-profile-top {
+        padding: 20px;
+    }
+
+    .preview-section {
+        padding: 20px;
+    }
+
+    .preview-photo-private {
+        margin: 18px 20px;
+    }
+
+    .preview-actions {
+        padding: 0 20px 20px;
+
+        grid-template-columns: 1fr;
+    }
+
+    .form-row,
+    .form-grid,
+    .profile-form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================================================
+   27. SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+    .profile-header-container {
+        width: calc(100% - 18px);
+    }
+
+    .profile-header .logo {
+        font-size: 0.95rem;
+    }
+
+    .profile-exit {
+        font-size: 0.65rem;
+    }
+
+    .progress-step {
+        width: 24px;
+        height: 24px;
+
+        flex-basis: 24px;
+
+        font-size: 0.52rem;
+    }
+
+    .progress-line {
+        max-width: 14px;
+    }
+
+    .profile-main {
+        padding-left: 11px;
+        padding-right: 11px;
+    }
+
+    .profile-section-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .interest-option {
+        min-height: 66px;
+
+        padding: 10px 7px;
+
+        border-radius: 14px;
+
+        font-size: 0.7rem;
+    }
+
+    .interest-option span {
+        font-size: 1.25rem;
+    }
+
+    .interest-option.active::after,
+    .interest-option.selected::after {
+        width: 17px;
+        height: 17px;
+
+        top: 6px;
+        right: 6px;
+
+        font-size: 0.58rem;
+    }
+
+    .avatar-options {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+
+        gap: 7px;
+    }
+
+    .avatar-option {
+        border-radius: 12px;
+
+        font-size: 1.35rem;
+    }
+
+    .age-range {
+        gap: 6px;
+    }
+
+    .reveal-option {
+        padding: 14px;
+
+        gap: 10px;
+    }
+
+    .reveal-option-icon {
+        width: 38px;
+        height: 38px;
+
+        flex-basis: 38px;
+
+        border-radius: 11px;
+    }
+
+    .reveal-option-content strong {
+        font-size: 0.78rem;
+    }
+
+    .reveal-option-content small {
+        font-size: 0.68rem;
+    }
+
+    .form-primary-btn,
+    .continue-button,
+    .next-button,
+    .primary-button {
+        min-height: 54px;
+    }
+}
+
+
+/* =========================================================
+   28. REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .profile-main *,
+    .profile-main *::before,
+    .profile-main *::after {
+        scroll-behavior: auto !important;
+
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
+
+
