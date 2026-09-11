@@ -19152,3 +19152,352 @@ button {
         box-sizing: border-box;
     }
 }
+/* =========================================================
+   LINKUPGH — MOBILE SECTION STACK FIX
+   FINAL OVERRIDE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* Main profile area */
+    .profile-main {
+        position: relative !important;
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+        overflow: visible !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    /* EVERY PROFILE SECTION MUST STACK */
+    .profile-main > section {
+        position: relative !important;
+        top: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        left: auto !important;
+
+        display: block !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+
+        margin: 0 !important;
+        padding: 55px 20px !important;
+
+        float: none !important;
+        clear: both !important;
+
+        transform: none !important;
+
+        overflow: visible !important;
+
+        box-sizing: border-box !important;
+    }
+
+    /* Don't let children create strange positioning */
+    .profile-main > section > * {
+        box-sizing: border-box !important;
+    }
+
+    /* Section headers */
+    .profile-main .profile-section-header,
+    .profile-main .form-section-header {
+        position: relative !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        margin-bottom: 32px !important;
+    }
+
+    /* Section headings */
+    .profile-main > section h1,
+    .profile-main > section h2,
+    .profile-main > section h3 {
+        position: relative !important;
+        height: auto !important;
+        max-height: none !important;
+        overflow: visible !important;
+        transform: none !important;
+    }
+
+    /* Mobile section heading size */
+    .profile-main > section h2 {
+        font-size: clamp(2rem, 8vw, 2.8rem) !important;
+        line-height: 1.08 !important;
+        margin-top: 12px !important;
+        margin-bottom: 16px !important;
+    }
+
+    /* Section paragraphs */
+    .profile-main > section p {
+        position: relative !important;
+        height: auto !important;
+        max-height: none !important;
+        overflow: visible !important;
+        line-height: 1.65 !important;
+    }
+
+
+    /* =====================================================
+       PHOTO REVEAL — MOBILE
+       ===================================================== */
+
+    .photo-reveal-settings {
+        padding-top: 55px !important;
+        padding-bottom: 55px !important;
+    }
+
+    .photo-reveal-settings .profile-section-header {
+        display: block !important;
+    }
+
+    .photo-reveal-settings .profile-section-header h2 {
+        font-size: clamp(2rem, 8vw, 2.7rem) !important;
+        line-height: 1.08 !important;
+        margin-bottom: 18px !important;
+    }
+
+    .reveal-preview {
+        position: relative !important;
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+
+        margin: 0 0 35px !important;
+        padding: 22px !important;
+
+        box-sizing: border-box !important;
+    }
+
+    .reveal-preview-content {
+        position: relative !important;
+        width: auto !important;
+        height: auto !important;
+        min-width: 0 !important;
+    }
+
+    .reveal-preview-content h3 {
+        font-size: 1.1rem !important;
+        line-height: 1.3 !important;
+        margin: 5px 0 8px !important;
+    }
+
+    .reveal-preview-content p {
+        font-size: 0.9rem !important;
+        line-height: 1.55 !important;
+        margin: 0 !important;
+    }
+
+
+    /* Reveal options */
+    .reveal-options {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 14px !important;
+
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .reveal-option {
+        position: relative !important;
+
+        display: flex !important;
+        align-items: flex-start !important;
+
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+
+        padding: 18px !important;
+
+        box-sizing: border-box !important;
+    }
+
+    .reveal-option-content {
+        position: relative !important;
+        flex: 1 1 auto !important;
+        min-width: 0 !important;
+        height: auto !important;
+    }
+
+    .reveal-option-content strong,
+    .reveal-option-content small {
+        display: block !important;
+        height: auto !important;
+    }
+
+    .reveal-option-content small {
+        margin-top: 5px !important;
+        line-height: 1.45 !important;
+    }
+
+
+    /* =====================================================
+       PROFILE PREVIEW — MOBILE
+       ===================================================== */
+
+    .profile-preview-section {
+        padding-top: 55px !important;
+        padding-bottom: 55px !important;
+    }
+
+    .profile-preview-card {
+        position: relative !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+
+        overflow: visible !important;
+
+        box-sizing: border-box !important;
+    }
+
+    .preview-profile-top {
+        position: relative !important;
+
+        display: flex !important;
+        align-items: center !important;
+
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .preview-section {
+        position: relative !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+    }
+
+    .preview-tag-list {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 8px !important;
+
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .preview-photo-private {
+        position: relative !important;
+
+        display: flex !important;
+        align-items: flex-start !important;
+
+        width: 100% !important;
+        height: auto !important;
+
+        box-sizing: border-box !important;
+    }
+
+    .preview-actions {
+        position: relative !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .preview-action {
+        width: 100% !important;
+        min-height: 52px !important;
+    }
+
+
+    /* =====================================================
+       PREFERENCES / AVATAR
+       ===================================================== */
+
+    .profile-preferences,
+    .profile-avatar {
+        position: relative !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        overflow: visible !important;
+    }
+
+
+    /* =====================================================
+       COMPLETE SECTION
+       ===================================================== */
+
+    .profile-complete {
+        position: relative !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        overflow: visible !important;
+    }
+
+
+    /* =====================================================
+       BUTTONS
+       ===================================================== */
+
+    .profile-main .form-primary-btn {
+        position: relative !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        min-height: 54px !important;
+
+        box-sizing: border-box !important;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .profile-main > section {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+
+    .profile-main > section h2 {
+        font-size: 2rem !important;
+    }
+
+    .reveal-preview {
+        padding: 18px !important;
+    }
+
+    .reveal-option {
+        padding: 16px !important;
+    }
+
+    .profile-preview-card {
+        padding: 18px !important;
+    }
+}
